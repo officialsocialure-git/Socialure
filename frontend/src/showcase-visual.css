@@ -1,0 +1,80 @@
+/* Reference-inspired portfolio showcase: emerald stage, editorial storefront mockups, gold details */
+.showcase-scene{height:240px;position:relative;isolation:isolate;overflow:hidden;border-radius:12px;background:radial-gradient(ellipse at 50% 48%,rgba(36,91,70,.62),rgba(7,31,27,.1) 58%,transparent 78%);perspective:1000px;--scene-gold:#c8a45d;--scene-cream:#eee4cf}
+.showcase-scene--large{height:clamp(310px,32vw,430px);margin:15px 0}
+.scene-halo{position:absolute;width:68%;height:75%;left:16%;top:8%;border-radius:50%;background:radial-gradient(ellipse,rgba(87,133,94,.24),transparent 70%);filter:blur(12px);animation:sceneHalo 7s ease-in-out infinite}
+.scene-arc{position:absolute;left:50%;top:48%;width:83%;height:72%;border:1px solid rgba(200,164,93,.36);border-radius:50%;transform:translate(-50%,-50%) rotate(-20deg);pointer-events:none}
+.scene-arc--two{width:95%;height:83%;border-color:rgba(200,164,93,.15);transform:translate(-50%,-50%) rotate(23deg)}
+.scene-floor{position:absolute;left:12%;right:10%;bottom:7%;height:20%;background:radial-gradient(ellipse,rgba(0,0,0,.42),transparent 70%);filter:blur(8px)}
+.scene-pedestal{position:absolute;bottom:12%;height:13%;width:38%;background:linear-gradient(180deg,#254b3d,#0a211c 85%);border:1px solid rgba(200,164,93,.38);transform:skewX(-25deg);box-shadow:0 16px 18px rgba(0,0,0,.22)}
+.scene-pedestal span{position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,transparent,rgba(231,198,126,.8),transparent)}
+.pedestal--back{left:22%;width:47%;bottom:17%;opacity:.65}.pedestal--front{left:39%;width:39%;bottom:9%;height:10%}
+.device{position:absolute;transform-style:preserve-3d;filter:drop-shadow(0 18px 14px rgba(0,0,0,.34))}
+.device--laptop{z-index:3;left:13%;top:23%;width:64%;height:53%;transform:rotateY(-10deg) rotateX(2deg);animation:deviceFloat 6s ease-in-out infinite}
+.laptop-screen{position:absolute;inset:0 0 7% 0;padding:3.2%;border:3px solid #b9a77e;border-bottom-width:5px;border-radius:7px;background:#e9e1d0;color:#21372c;box-shadow:inset 0 0 0 1px #fff7e8;overflow:hidden}
+.laptop-base{position:absolute;left:-3%;right:-3%;bottom:0;height:8%;background:linear-gradient(#b8aa8a,#5b6554 45%,#263b30);clip-path:polygon(4% 0,96% 0,100% 100%,0 100%);border-radius:0 0 6px 6px}
+.store-nav{height:13%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(45,67,48,.2);font-size:clamp(4px,.5vw,7px);letter-spacing:.06em;white-space:nowrap}
+.store-nav b{font-family:Georgia,serif;font-size:1.25em;letter-spacing:.18em}.store-nav span{font-size:.65em}.store-nav i{font-style:normal}
+.store-hero{height:76%;display:grid;grid-template-columns:1.05fr .95fr;position:relative;overflow:hidden;background:linear-gradient(115deg,#e7dfcd,#d4d0b5)}
+.store-copy{position:relative;z-index:2;align-self:center;padding:7% 0 6% 7%;display:flex;flex-direction:column;gap:5%;height:100%;justify-content:center}
+.store-copy small{font-size:clamp(4px,.45vw,6px);letter-spacing:.15em;color:#66745a}
+.store-copy strong{font:clamp(10px,1.4vw,21px)/.97 Georgia,serif;font-weight:400;color:#314736}
+.store-copy em{color:#a77e3f;font-weight:400}
+.store-copy>span{font-size:clamp(4px,.43vw,6px);line-height:1.4;max-width:88%;color:#5e6b58}
+.store-copy>b{font-size:clamp(3px,.37vw,5px);letter-spacing:.07em;margin-top:3%;color:#465b43}
+.store-product{position:absolute;background:linear-gradient(135deg,rgba(255,255,255,.5),rgba(255,255,255,.05));border:1px solid rgba(255,255,255,.55);box-shadow:8px 8px 15px rgba(51,58,36,.12)}
+.product--bottle{width:19%;height:53%;right:25%;bottom:15%;border-radius:20% 20% 12% 12%;background:linear-gradient(90deg,#9c8153,#e6d5a4 28%,#9c8153 70%,#5e6043);animation:bottleShine 5s ease-in-out infinite}
+.product--bottle:before{content:"";position:absolute;width:36%;height:13%;top:-12%;left:32%;background:#9a835b;border-radius:2px}
+.product--bottle span{position:absolute;left:13%;right:13%;top:38%;height:30%;background:#e6dcc1;display:grid;place-items:center}
+.product--bottle span:after{content:"A\A R\A A";white-space:pre;font:clamp(3px,.45vw,6px)/1.15 Georgia,serif;color:#5b684b;text-align:center}
+.product--jar{width:24%;height:28%;right:3%;bottom:14%;border-radius:8% 8% 14% 14%;background:linear-gradient(90deg,#66775a,#b7b48b 35%,#687557);animation:jarFloat 5s ease-in-out infinite}
+.product--jar:before{content:"";position:absolute;left:-4%;right:-4%;height:15%;top:-12%;background:#b2a077;border-radius:3px}
+.product--jar i{position:absolute;left:10%;right:10%;top:38%;height:25%;background:#e7ddc7}
+.store-bottom{height:11%;display:flex;align-items:center;justify-content:space-between;font-size:clamp(3px,.38vw,5px);letter-spacing:.12em;color:#52664f}
+.device--phone{z-index:5;width:22%;height:69%;right:8%;top:18%;transform:rotateY(-5deg) rotateZ(3deg);animation:phoneFloat 5.5s ease-in-out infinite}
+.phone-frame{position:absolute;inset:0;border:2px solid #c8b990;border-radius:14px;background:#f0e7d5;color:#263b2d;padding:7% 6%;overflow:hidden;box-shadow:inset 0 0 0 2px #293c30}
+.phone-notch{position:absolute;top:2%;left:36%;width:28%;height:3%;border-radius:8px;background:#1b2d23}
+.phone-top{display:flex;justify-content:space-between;font-size:clamp(4px,.42vw,6px);padding:1% 0 7%}
+.phone-brand{font:clamp(5px,.57vw,8px) Georgia,serif;letter-spacing:.13em;display:flex;justify-content:space-between;border-bottom:1px solid #d4cbb7;padding-bottom:8%}
+.phone-photo{height:39%;margin-top:7%;position:relative;overflow:hidden;background:linear-gradient(145deg,#d5d5b9,#aeb89b 55%,#e6d9bc)}
+.phone-bottle{position:absolute;left:36%;top:16%;height:73%;width:27%;border-radius:18% 18% 10% 10%;background:linear-gradient(90deg,#887348,#e2d1a4 40%,#776748);box-shadow:7px 5px 8px #6e755344}
+.phone-bottle:before{content:"";position:absolute;left:30%;top:-10%;width:40%;height:13%;background:#756648}
+.phone-leaf{position:absolute;right:8%;top:7%;font-size:clamp(13px,2vw,28px);color:#6c7a53;transform:rotate(24deg)}
+.phone-product-copy{display:flex;flex-direction:column;gap:5%;padding-top:8%}
+.phone-product-copy small{font-size:clamp(3px,.38vw,5px);letter-spacing:.1em;color:#718064}
+.phone-product-copy strong{font:clamp(6px,.72vw,10px) Georgia,serif;font-weight:400}
+.phone-product-copy>span{font-size:clamp(5px,.48vw,7px)}
+.phone-product-copy b{margin-top:4%;padding:7% 2%;text-align:center;background:#314b37;color:#f2e8d4;font-size:clamp(3px,.38vw,5px);letter-spacing:.08em;font-weight:400}
+.brand-card{position:absolute;z-index:4;background:#e9e0cb;color:#324735;border:1px solid rgba(222,194,132,.85);box-shadow:0 12px 25px rgba(0,0,0,.26);padding:3%;display:flex;flex-direction:column}
+.brand-card--identity{left:4%;top:11%;width:24%;height:31%;transform:rotate(-7deg);animation:cardFloat 7s ease-in-out infinite}
+.mini-label{font-size:clamp(4px,.4vw,6px);letter-spacing:.1em;color:#758065}
+.identity-emblem{font:clamp(23px,3vw,42px) Georgia,serif;text-align:center;line-height:1.1;margin:auto;color:#9b7c45;position:relative}
+.identity-emblem span{font:clamp(7px,.8vw,11px) Georgia,serif;position:absolute;right:-35%;top:3%;color:#6e7b59}
+.brand-card--identity strong{text-align:center;font:clamp(6px,.7vw,10px) Georgia,serif;letter-spacing:.22em}
+.brand-card--identity small{text-align:center;font-size:clamp(3px,.34vw,5px);letter-spacing:.13em;margin-top:4%}
+.identity-swatches{display:flex;gap:3px;margin-top:7%}
+.identity-swatches i{height:8px;flex:1;background:#314a38}.identity-swatches i:nth-child(2){background:#b5a176}.identity-swatches i:nth-child(3){background:#d8cfb8}.identity-swatches i:nth-child(4){background:#8b6a43}
+.brand-card--campaign{right:3%;bottom:9%;width:24%;height:29%;transform:rotate(5deg);animation:campaignFloat 6.5s ease-in-out infinite}
+.campaign-art{position:relative;flex:1;overflow:hidden;margin:6% 0;background:linear-gradient(140deg,#c6c8a9,#e6d6b5)}
+.campaign-sun{position:absolute;width:48%;aspect-ratio:1;border-radius:50%;background:#d4b875;left:26%;top:13%}
+.campaign-bottle{position:absolute;left:40%;bottom:5%;width:22%;height:65%;border-radius:5px 5px 3px 3px;background:linear-gradient(90deg,#7a6945,#d5c08c 35%,#85734b);box-shadow:5px 3px 6px #59634955}
+.campaign-leaf{position:absolute;right:8%;bottom:6%;font-size:clamp(12px,1.6vw,22px);color:#5b7550}
+.brand-card--campaign strong{font:clamp(5px,.58vw,8px) Georgia,serif;letter-spacing:.06em}.brand-card--campaign small{font-size:clamp(3px,.34vw,5px);letter-spacing:.1em;margin-top:3%;color:#788064}
+.scene-orbit-label{position:absolute;z-index:2;display:flex;align-items:center;gap:5px;font:clamp(4px,.43vw,6px) 'DM Mono',monospace;letter-spacing:.14em;color:#d6bd81;opacity:.9}
+.scene-orbit-label i{display:block;width:16px;height:1px;background:#c8a45d}.label--left{left:4%;bottom:8%}.label--right{right:5%;top:10%}
+.scene-spark{position:absolute;width:3px;height:3px;border-radius:50%;background:#f0d393;box-shadow:0 0 8px #e4c57f;animation:sparkDrift 4s ease-in-out infinite}
+.spark--one{left:34%;top:17%}.spark--two{left:79%;top:47%;animation-delay:-1.4s}.spark--three{left:45%;bottom:12%;animation-delay:-2.2s}
+.showcase--commerce .brand-card--identity,.showcase--identity .device--phone{animation-duration:4s}
+.showcase--campaign .brand-card--campaign{transform:rotate(0deg)}
+.showcase--network .scene-arc{border-style:dashed;opacity:.5}
+.showcase--transform .scene-halo{animation-duration:3.5s}
+@keyframes deviceFloat{0%,100%{translate:0 0;rotate:0deg}50%{translate:0 -5px;rotate:.5deg}}
+@keyframes phoneFloat{0%,100%{translate:0 0;rotate:3deg}50%{translate:0 -8px;rotate:1deg}}
+@keyframes cardFloat{0%,100%{translate:0 0;rotate:-7deg}50%{translate:0 -7px;rotate:-5deg}}
+@keyframes campaignFloat{0%,100%{translate:0 0;rotate:5deg}50%{translate:0 -6px;rotate:3deg}}
+@keyframes sceneHalo{0%,100%{opacity:.6;scale:.96}50%{opacity:1;scale:1.06}}
+@keyframes sparkDrift{0%,100%{translate:0 0;opacity:.35}50%{translate:4px -8px;opacity:1}}
+@keyframes bottleShine{0%,100%{filter:brightness(.95)}50%{filter:brightness(1.12)}}
+@keyframes jarFloat{0%,100%{translate:0 0}50%{translate:0 -3px}}
+@media(min-width:900px){.showcase-scene--large .device--laptop{left:12%;top:22%;width:66%;height:55%}.showcase-scene--large .device--phone{right:8%;top:18%;width:21%;height:70%}.showcase-scene--large .brand-card--identity{left:3%;top:10%;width:24%;height:32%}.showcase-scene--large .brand-card--campaign{right:3%;bottom:8%;width:24%;height:30%}}
+@media(max-width:640px){.showcase-scene--large{height:290px}.device--laptop{left:8%;top:25%;width:73%;height:48%}.device--phone{right:5%;top:21%;width:24%;height:64%}.brand-card--identity{left:2%;top:10%;width:25%;height:27%}.brand-card--campaign{right:2%;bottom:7%;width:25%;height:25%}.store-nav span{display:none}.scene-orbit-label{font-size:4px}.store-copy strong{font-size:12px}.phone-product-copy strong{font-size:7px}}
+@media(prefers-reduced-motion:reduce){.showcase-scene *, .showcase-scene *::before,.showcase-scene *::after{animation:none!important}}

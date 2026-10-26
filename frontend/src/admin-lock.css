@@ -1,0 +1,40 @@
+/* Small gold admin lock in the existing navbar; intentionally icon-only. */
+.admin-lock {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #C6A66B;
+  border: 1px solid #C6A66B;
+  border-radius: 50%;
+  background: transparent;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color .25s ease, background .25s ease, box-shadow .25s ease, transform .25s ease;
+}
+.admin-lock svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.admin-lock:hover,
+.admin-lock:focus-visible {
+  color: #F4D18A;
+  background: rgba(198, 166, 107, .10);
+  box-shadow: 0 0 15px rgba(198, 166, 107, .30);
+  outline: none;
+}
+.admin-lock:active { transform: scale(.96); }
+.admin-lock:focus-visible { outline: 2px solid #F4D18A; outline-offset: 3px; }
+@media (max-width: 900px) {
+  .admin-lock { width: 42px; height: 42px; flex-basis: 42px; }
+}
+@media (max-width: 640px) {
+  .admin-lock { width: 38px; height: 38px; flex-basis: 38px; }
+  .admin-lock svg { width: 18px; height: 18px; }
+}

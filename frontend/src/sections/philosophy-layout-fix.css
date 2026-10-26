@@ -1,0 +1,70 @@
+/* Match the approved mockup: a seamless cream-and-gold section directly below the emerald hero. */
+.philosophy-section {
+  margin-top: 0 !important;
+  border-top: 1px solid rgba(190, 145, 86, 0.18);
+  box-shadow: inset 0 18px 36px rgba(255, 250, 239, 0.18);
+}
+/* Keep the philosophy section focused on its headline and six cards. */
+.philosophy-side-nav,
+.philosophy-scroll { display: none !important; }
+/* Keep the edit controls out of the artwork; pencil buttons remain on each card. */
+.philosophy-edit-tools { display: none !important; }
+.philosophy-bottom-copy {
+  position: absolute; z-index: 3; left: 3.7%; bottom: 6.4%;
+  font-size: 10px; letter-spacing: .18em; line-height: 2; text-transform: uppercase; color: #8d5726;
+}
+.philosophy-bottom-copy i { display:block; width:31px; height:1px; background:#8d5726; margin-top:14px; }
+.philosophy-seal {
+  position:absolute; z-index:3; right:2.2%; bottom:2.2%; width:105px; height:105px;
+  border:1px solid #a16a31; border-radius:50%; display:grid; place-items:center;
+  color:#8d5926; transform:rotate(-12deg); pointer-events:none;
+}
+.philosophy-seal:before,.philosophy-seal:after {
+  content:""; position:absolute; inset:7px; border:1px solid #a16a31; border-radius:50%;
+}
+.philosophy-seal:after { inset:14px; border-style:dotted; }
+.philosophy-seal b { font-family:"Playfair Display",Georgia,serif; font-size:53px; font-weight:500; }
+.philosophy-seal small,.philosophy-seal span {
+  position:absolute; font-size:6px; letter-spacing:.13em; background:#f0dfc8; padding:0 4px; white-space:nowrap;
+}
+.philosophy-seal small { top:9px; }
+.philosophy-seal span { bottom:12px; letter-spacing:.14em; }
+@media (max-width:700px) {
+  .philosophy-bottom-copy { left:22px; bottom:25px; font-size:9px; }
+  .philosophy-seal { right:18px; bottom:18px; width:82px; height:82px; }
+  .philosophy-seal b { font-size:42px; }
+  .philosophy-seal small,.philosophy-seal span { font-size:5px; }
+}
+/* Crisp finishing pass: remove fog, bloom and glass blur while preserving the layout. */
+.philosophy-section,
+.agency-site[data-theme="light"] .philosophy-section {
+  background: linear-gradient(135deg, #0b3429 0%, #104332 52%, #082d24 100%) !important;
+}
+.agency-site[data-theme="dark"] .philosophy-section {
+  background: #0F3D3A !important;
+  background-image: none !important;
+}
+.philosophy-section::before,
+.agency-site[data-theme="light"] .philosophy-section::before {
+  opacity:.22; filter:none !important;
+  background:linear-gradient(165deg,transparent 0 45%,rgba(201,164,92,.18) 46%,transparent 47% 70%,rgba(201,164,92,.1) 71%,transparent 72%) !important;
+}
+.philosophy-atmosphere,
+.agency-site[data-theme="light"] .philosophy-atmosphere { display:none !important; }
+.philosophy-lines path,
+.agency-site[data-theme="light"] .philosophy-lines path { filter:none !important; }
+.philosophy-lines .philosophy-lines__halo,
+.agency-site[data-theme="light"] .philosophy-lines .philosophy-lines__halo {
+  filter:none !important; opacity:.22 !important; stroke-width:2.2 !important;
+}
+.philosophy-card,
+.agency-site[data-theme="light"] .philosophy-card {
+  background:#f8f0df !important; border:1px solid rgba(255,250,238,.95) !important;
+  box-shadow:0 9px 22px rgba(0,0,0,.2),0 1px 0 rgba(255,255,255,.8) inset !important;
+  backdrop-filter:none !important; -webkit-backdrop-filter:none !important;
+}
+.philosophy-card:hover,
+.agency-site[data-theme="light"] .philosophy-card:hover { box-shadow:0 14px 28px rgba(0,0,0,.24) !important; }
+.philosophy-card__image { filter:none !important; }
+.agency-site[data-theme="light"] .philosophy-seal small,
+.agency-site[data-theme="light"] .philosophy-seal span { background:#0f3b2e !important; }

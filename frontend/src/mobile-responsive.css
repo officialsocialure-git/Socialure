@@ -1,0 +1,229 @@
+/* Responsive polish pass: tablet and mobile layouts */
+@media (max-width: 900px) {
+  .agency-site .topbar {
+    padding-inline: 20px !important;
+    gap: 12px;
+  }
+  .agency-site .nav { gap: 14px; }
+  .agency-site .nav-actions { display: flex; align-items: center; gap: 8px; }
+  .agency-site .nav-cta { white-space: nowrap; }
+  .agency-site .hero { grid-template-columns: minmax(0, 1fr) minmax(0, .9fr); }
+  .agency-site .client-stories__hero {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: auto;
+  }
+  .agency-site .client-stories__copy { padding: 58px 6% 20px; max-width: none; }
+  .agency-site .client-stories__visual { padding: 30px 6% 70px; }
+  .agency-site .client-stories__card { max-width: none; min-height: 360px; }
+  .agency-site .client-stories__note { right: 3%; bottom: 4%; width: 112px; min-height: 145px; font-size: 19px; }
+  .agency-site .our-portfolio__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas: "feature feature" "product commerce" "car fashion";
+    grid-template-rows: 340px 240px 260px;
+  }
+  .agency-site .services-showcase-heading h2 { white-space: normal; }
+  .agency-site .project-process-timeline { gap: 18px; }
+  .agency-site[data-theme="light"] .contact-brief {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) !important;
+  }
+  .agency-site[data-theme="light"] .contact-brief__story-content {
+    padding: 42px 26px !important;
+  }
+  .agency-site[data-theme="light"] .contact-brief__form-panel {
+    padding: 38px 24px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .agency-site { padding-top: 66px !important; }
+  .agency-site .topbar {
+    height: 66px !important;
+    padding: 0 14px !important;
+    gap: 8px;
+  }
+  .agency-site .brand { min-width: 0; }
+  .agency-site .brand-copy strong { font-size: 11px; }
+  .agency-site .menu-toggle {
+    display: grid !important;
+    place-items: center;
+    flex: 0 0 auto;
+    margin: 0 0 0 auto !important;
+    padding: 8px !important;
+  }
+  .agency-site .nav-actions { gap: 6px; }
+  .agency-site .nav-cta { padding: 9px 10px !important; font-size: 8px !important; gap: 5px; }
+  .agency-site .theme-toggle { padding: 8px !important; gap: 4px; }
+  .agency-site .theme-toggle span { display: none; }
+  .agency-site .nav {
+    top: 66px !important;
+    left: 0 !important;
+    right: 0 !important;
+    padding: 18px 22px 22px !important;
+    gap: 14px !important;
+  }
+  .agency-site .nav--open { display: flex !important; }
+  .agency-site .nav a { font-size: 11px !important; padding: 7px 0 !important; }
+  .agency-site .hero {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    min-height: auto !important;
+    padding: 18px 20px 48px !important;
+    gap: 18px !important;
+  }
+  .agency-site .hero h1 { font-size: clamp(40px, 11vw, 58px) !important; letter-spacing: -.04em !important; }
+  .agency-site .hero-art { width: 100%; min-width: 0; }
+  .agency-site .visual--large { height: 260px !important; }
+  .agency-site .hero-bottom { left: 20px !important; right: 20px !important; }
+  .agency-site .section { padding: 64px 20px !important; }
+  .agency-site .section-heading {
+    display: block !important;
+    gap: 18px !important;
+    margin-bottom: 28px !important;
+  }
+  .agency-site .section-heading h2,
+  .agency-site .about h2,
+  .agency-site .contact h2 { font-size: clamp(34px, 9vw, 44px) !important; }
+  .agency-site .service-grid { grid-template-columns: minmax(0, 1fr) !important; }
+  .agency-site .service-card,
+  .agency-site .service-card:nth-child(2),
+  .agency-site .service-card:nth-child(3),
+  .agency-site .service-card:nth-child(4) {
+    margin: 0 !important;
+    padding: 22px 0 26px !important;
+    min-height: 0 !important;
+    border-right: 0 !important;
+    border-top: 0 !important;
+    border-bottom: 1px solid var(--line) !important;
+  }
+  .agency-site .concept-grid { grid-template-columns: minmax(0, 1fr) !important; }
+  .agency-site .concept-visual .visual { height: 220px !important; }
+  .agency-site .services-showcase { padding: 48px 18px 26px !important; }
+  .agency-site .services-showcase-heading { margin-bottom: 24px !important; }
+  .agency-site .services-showcase-eyebrow {
+    color: #6C151E !important;
+  }
+  .agency-site .services-showcase-eyebrow i {
+    background-color: #6C151E !important;
+  }
+  .agency-site .services-showcase-heading h2 {
+    white-space: normal !important;
+    font-size: clamp(32px, 8.5vw, 44px) !important;
+    line-height: 1.08 !important;
+  }
+  .agency-site .services-showcase-heading > p { font-size: 14px !important; }
+  .agency-site .project-process { padding: 52px 20px 44px !important; }
+  .agency-site .project-process h2 { font-size: clamp(32px, 8.5vw, 44px) !important; }
+  .agency-site .project-process-timeline { grid-template-columns: 1fr !important; gap: 0 !important; margin-top: 42px !important; }
+  .agency-site .our-portfolio { padding: 50px 20px 0 !important; }
+  .agency-site .our-portfolio__heading { display: flex !important; flex-direction: column !important; align-items: flex-start !important; gap: 16px !important; margin-bottom: 24px !important; }
+  .agency-site .our-portfolio h2 { font-size: clamp(34px, 9vw, 46px) !important; letter-spacing: -.04em !important; }
+  .agency-site .our-portfolio__heading p { margin-top: 12px !important; font-size: 14px !important; }
+  .agency-site .our-portfolio__view-all { margin-top: 0 !important; min-height: 44px !important; }
+  .agency-site .our-portfolio__grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-areas: "feature" "product" "commerce" "car" "fashion" !important;
+    grid-template-rows: 360px 300px 300px 300px 300px !important;
+    width: calc(100% + 40px) !important;
+    margin-left: -20px !important;
+    margin-right: -20px !important;
+  }
+  .agency-site .our-portfolio__card h3 { font-size: 23px !important; }
+  .agency-site .client-stories__copy { padding: 48px 20px 16px !important; }
+  .agency-site .client-stories__copy h2 { font-size: clamp(42px, 11vw, 58px) !important; }
+  .agency-site .client-stories__copy > p { font-size: 14px !important; }
+  .agency-site .client-stories__actions { gap: 16px !important; margin-top: 24px !important; }
+  .agency-site .client-stories__visual { padding: 24px 16px 64px !important; }
+  .agency-site .client-stories__card { min-height: 0 !important; padding: 24px 20px !important; border-radius: 18px !important; }
+  .agency-site .client-stories__card blockquote { font-size: clamp(21px, 5.6vw, 27px) !important; line-height: 1.35 !important; margin: 16px 0 22px !important; }
+  .agency-site .client-stories__quote-icon { width: 38px !important; height: 38px !important; }
+  .agency-site .client-stories__stars { font-size: 16px !important; }
+  .agency-site .client-stories__card-bottom { flex-wrap: wrap !important; gap: 12px !important; }
+  .agency-site .client-stories__avatar { width: 46px !important; height: 46px !important; flex-basis: 46px !important; }
+  .agency-site .client-stories__person { flex: 1 1 130px; }
+  .agency-site .client-stories__person strong { font-size: 9px !important; letter-spacing: .12em !important; }
+  .agency-site .client-stories__person span { font-size: 12px !important; }
+  .agency-site .client-stories__controls { margin-left: 0 !important; width: 100%; justify-content: flex-end; }
+  .agency-site .client-stories__controls button { width: 42px !important; height: 42px !important; }
+  .agency-site .client-stories__note { right: 0 !important; bottom: 0 !important; width: 88px !important; min-height: 118px !important; padding: 10px 7px !important; font-size: 15px !important; }
+  .agency-site[data-theme="light"] .contact-brief {
+    grid-template-columns: minmax(0, 1fr) !important;
+    min-height: 0 !important;
+  }
+  .agency-site[data-theme="light"] .contact-brief__story {
+    min-height: 0 !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+  .agency-site[data-theme="light"] .contact-brief__story-content {
+    width: 100% !important;
+    padding: 46px 22px 42px !important;
+  }
+  .agency-site[data-theme="light"] .contact-brief__story h2 { font-size: clamp(40px, 11vw, 54px) !important; }
+  .agency-site[data-theme="light"] .contact-brief__intro { font-size: 14px !important; }
+  .agency-site[data-theme="light"] .contact-brief__form-panel { padding: 38px 22px 44px !important; }
+  .agency-site[data-theme="light"] .contact-brief__form-wrap h3 { font-size: 32px !important; }
+  .agency-site[data-theme="light"] .contact-brief form { gap: 16px !important; }
+  .agency-site[data-theme="light"] .contact-brief form input,
+  .agency-site[data-theme="light"] .contact-brief form select { min-height: 50px !important; font-size: 14px !important; }
+  .agency-site .footer { padding: 24px 20px !important; gap: 14px !important; }
+  .agency-site .footer > span { font-size: 7px !important; }
+}
+
+@media (max-width: 380px) {
+  .agency-site .topbar { padding-inline: 10px !important; }
+  .agency-site .brand-copy strong { font-size: 10px !important; }
+  .agency-site .nav-cta { padding: 8px !important; }
+  .agency-site .nav-cta svg { display: none; }
+  .agency-site .theme-toggle { padding: 7px !important; }
+  .agency-site .client-stories__card-top { gap: 8px !important; }
+  .agency-site .client-stories__card { padding: 20px 16px !important; }
+}
+
+/* Mobile header alignment: menu left, logo centered, actions on the right */
+@media (max-width: 640px) {
+  /* Mobile hero uses the requested cream canvas while the rest of the site stays dark. */
+  .agency-site .hero.hero-arch-image-only {
+    background: #F5DABF !important;
+    background-color: #F5DABF !important;
+  }
+  .agency-site .theme-toggle { display: none !important; }
+
+  /* Keep the mobile hero compact and hide the CTA's decorative arrow. */
+  .agency-site .nav-cta svg { display: none !important; }
+  .agency-site .hero { padding-top: 3vh !important; }
+  .agency-site .hero-image-copy { padding-top: 14px !important; }
+  .agency-site .hero .eyebrow { margin-top: 0 !important; }
+  .agency-site .topbar {
+    display: grid !important;
+    grid-template-columns: 42px minmax(0, 1fr) auto !important;
+    align-items: center !important;
+    column-gap: 8px !important;
+    padding: 0 12px !important;
+    height: 66px !important;
+  }
+  .agency-site .menu-toggle {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    margin: 0 !important;
+    z-index: 2;
+  }
+  .agency-site .topbar > .brand {
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    min-width: 0;
+    margin: 0 !important;
+    z-index: 1;
+  }
+  .agency-site .nav-actions {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+    gap: 6px !important;
+    position: relative;
+    z-index: 2;
+  }
+}

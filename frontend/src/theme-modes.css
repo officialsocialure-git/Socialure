@@ -1,0 +1,449 @@
+/* Socialure brand theme switch */
+.agency-site{--brand-green:#0F3D3A;--brand-cream:#F5DABF;--brand-gold:#D0A45C;--green:#0F3D3A;--forest:#164A45;--gold:#D0A45C;--ivory:#F5DABF;--muted:#D8C1A9;--line:rgba(245,218,191,.2);transition:background-color .3s,color .3s}
+.brand{flex:0 0 auto}.brand-wordmark{display:inline-block;color:var(--ivory);font-family:'DM Sans',sans-serif;font-size:clamp(25px,2.2vw,34px);font-weight:800;letter-spacing:-.085em;line-height:1;white-space:nowrap;transition:color .25s}
+.nav-actions{display:flex;align-items:center;gap:14px}.theme-toggle{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-width:91px;min-height:42px;padding:0 14px;border:1px solid rgba(200,164,93,.55);border-radius:999px;background:rgba(7,31,27,.6);color:var(--ivory);font:600 11px 'DM Sans',sans-serif;cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .25s}.theme-toggle:hover{transform:translateY(-1px);border-color:var(--gold)}.theme-toggle svg{color:var(--gold)}
+/* Light mode: green sections switch to cream */
+.agency-site[data-theme="light"]{--green:#f8f2e6;--forest:#e9ddc8;--gold:#b8893e;--ivory:#1e2a26;--muted:#5e6b63;--line:rgba(15,59,46,.18);color:#1e2a26;background:#f8f2e6;background-image:radial-gradient(ellipse at 80% 15%,rgba(233,221,200,.62),transparent 38%)}
+.agency-site[data-theme="light"] .topbar{background:rgba(248,242,230,.94);border-bottom-color:rgba(15,59,46,.16);box-shadow:0 8px 28px rgba(30,42,38,.06)}
+.agency-site[data-theme="light"] .brand-wordmark{color:#0f3b2e}.agency-site[data-theme="light"] .nav a,.agency-site[data-theme="light"] .brand-copy strong{color:#1e2a26}.agency-site[data-theme="light"] .nav a:hover{color:#a77932}.agency-site[data-theme="light"] .nav-cta{background:#c9a45c;color:#102d24}.agency-site[data-theme="light"] .theme-toggle{background:#efe3ce;color:#173d30;border-color:rgba(15,59,46,.22)}.agency-site[data-theme="light"] .theme-toggle svg{color:#a77932}.agency-site[data-theme="light"] .menu-toggle{color:#173d30;border-color:rgba(15,59,46,.22)}
+.agency-site[data-theme="light"] .hero{color:#1e2a26}.agency-site[data-theme="light"] .hero .eyebrow{color:#a77932}.agency-site[data-theme="light"] .hero-title,.agency-site[data-theme="light"] .hero-title-line{color:#1e2a26}.agency-site[data-theme="light"] .hero-title em,.agency-site[data-theme="light"] .hero-title-dynamic{color:#b8893e}.agency-site[data-theme="light"] .hero-description{color:#4f5d55}.agency-site[data-theme="light"] .button--outline{color:#173d30;border-color:rgba(15,59,46,.5)}.agency-site[data-theme="light"] .button--outline:hover{background:rgba(15,59,46,.07)}.agency-site[data-theme="light"] .button--gold{background:#c9a45c;color:#102d24}.agency-site[data-theme="light"] .capabilities{color:#a77932}.agency-site[data-theme="light"] .capabilities b{color:#6d897a}.agency-site[data-theme="light"] .hero-bottom{color:#6e8176}.agency-site[data-theme="light"] .hero-bottom a{color:#a77932}.agency-site[data-theme="light"] .hero-showcase-image{filter:saturate(.92) brightness(1.06)}
+.agency-site[data-theme="light"] .services-showcase{background:linear-gradient(145deg,#f8f2e6,#efe3ce);color:#1e2a26}.agency-site[data-theme="light"] .services-showcase-heading h2,.agency-site[data-theme="light"] .services-showcase-copy h3{color:#1e2a26}.agency-site[data-theme="light"] .services-showcase-heading>p,.agency-site[data-theme="light"] .services-showcase-copy p{color:#56645b}.agency-site[data-theme="light"] .services-showcase-card{background:#F5DABF;border-color:rgba(15,61,58,.2);box-shadow:0 10px 26px rgba(15,61,58,.12),0 3px 8px rgba(42,47,35,.08),0 0 0 1px rgba(255,255,255,.25) inset}.agency-site[data-theme="light"] .services-showcase-card:hover{box-shadow:0 16px 34px rgba(15,61,58,.18),0 5px 12px rgba(42,47,35,.1),0 0 0 1px rgba(208,164,92,.25) inset}.agency-site[data-theme="light"] .services-showcase-image{background:#e9ddc8}.agency-site[data-theme="light"] .services-showcase-icon{background:#f3e7d2;color:#9c702e}.agency-site[data-theme="light"] .services-showcase-arrow{color:#0f3b2e}.agency-site[data-theme="light"] .services-showcase-footnote{color:#986b2e}
+.agency-site[data-theme="light"] .our-portfolio{--portfolio-green:#f8f2e6;--portfolio-green-deep:#efe3ce;--portfolio-cream:#1e2a26;--portfolio-gold:#b8893e;background:linear-gradient(135deg,#f8f2e6 0%,#efe3ce 100%);color:#1e2a26}.agency-site[data-theme="light"] .our-portfolio h2{color:#1e2a26}.agency-site[data-theme="light"] .our-portfolio__heading p{color:#56645b}.agency-site[data-theme="light"] .our-portfolio__view-all{background:#c9a45c;color:#102d24}.agency-site[data-theme="light"] .our-portfolio__card{color:#f8f2e6}
+.agency-site[data-theme="light"] .client-stories{color:#0f3b2e}
+.agency-site[data-theme="light"] .contact-brief{background:#f8f2e6;color:#1e2a26;border-top-color:rgba(15,59,46,.15)}.agency-site[data-theme="light"] .contact-brief__story{background-color:#e9ddc8;background-image:linear-gradient(90deg,rgba(248,242,230,.76),rgba(248,242,230,.87) 58%,rgba(248,242,230,.68)),url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1600&q=85')}.agency-site[data-theme="light"] .contact-brief__story::after{background:linear-gradient(90deg,rgba(248,242,230,.14),rgba(248,242,230,.08) 58%,rgba(248,242,230,.22))}.agency-site[data-theme="light"] .contact-brief__eyebrow,.agency-site[data-theme="light"] .contact-brief__story h2,.agency-site[data-theme="light"] .contact-brief__detail{color:#0f3b2e}.agency-site[data-theme="light"] .contact-brief__eyebrow span{background:#b8893e}.agency-site[data-theme="light"] .contact-brief__intro{color:#4f5d55}.agency-site[data-theme="light"] .contact-brief__detail{border-bottom-color:rgba(15,59,46,.22)}.agency-site[data-theme="light"] .contact-brief__socials a{color:#0f3b2e;border-color:rgba(15,59,46,.45)}.agency-site[data-theme="light"] .contact-brief__socials a:hover{background:#c9a45c;color:#0f3b2e}.agency-site[data-theme="light"] .contact-brief__form-panel{background:#efe3ce}.agency-site[data-theme="light"] .contact-brief__form-wrap h3{color:#0f3b2e}.agency-site[data-theme="light"] .contact-brief__subtext{color:#657067}.agency-site[data-theme="light"] .contact-brief form label{color:#1e2a26}.agency-site[data-theme="light"] .contact-brief form input,.agency-site[data-theme="light"] .contact-brief form select,.agency-site[data-theme="light"] .contact-brief form textarea{background:rgba(255,255,255,.78);border-color:rgba(15,59,46,.22);color:#1e2a26}.agency-site[data-theme="light"] .contact-brief form input::placeholder,.agency-site[data-theme="light"] .contact-brief form textarea::placeholder{color:#7a817a}.agency-site[data-theme="light"] .contact-brief form select option{background:#fffaf1;color:#1e2a26}.agency-site[data-theme="light"] .contact-brief__select-wrap>svg{color:#0f3b2e}.agency-site[data-theme="light"] .contact-brief__submit{background:#c9a45c;color:#102d24}
+.agency-site[data-theme="light"] .footer{border-top-color:rgba(15,59,46,.18);color:#68776d}.agency-site[data-theme="light"] .footer .brand-wordmark{color:#0f3b2e}.agency-site[data-theme="light"] .nav--open{background:#f8f2e6}.agency-site[data-theme="light"] .nav--open a{color:#1e2a26}
+/* Reverse the original cream sections to forest green in light mode */
+.agency-site[data-theme="light"] .philosophy-section{--ph-ink:#f8f2e6;--ph-gold:#d7b36a;--ph-gold-deep:#c9a45c;color:#f8f2e6;background:radial-gradient(ellipse at 44% 18%,rgba(31,86,66,.95) 0,rgba(15,59,46,.82) 36%,transparent 69%),radial-gradient(ellipse at 74% 67%,rgba(19,72,54,.7),transparent 43%),linear-gradient(180deg,#123f31 0%,#0f3b2e 63%,#082c23 100%)}
+.agency-site[data-theme="light"] .philosophy-section::before{background:linear-gradient(177deg,transparent 0 13%,#174b3bd9 17%,#b8893e70 23%,#174b3be8 31%,#c9a45c66 37%,#123f31ed 46%,#b8893e66 56%,#174b3be8 65%,#c9a45c57 74%,#082c23 100%)}
+.agency-site[data-theme="light"] .philosophy-atmosphere{background:radial-gradient(ellipse at 48% 42%,#d6b56c16,transparent 56%)}
+.agency-site[data-theme="light"] .philosophy-intro h2,.agency-site[data-theme="light"] .philosophy-intro>p,.agency-site[data-theme="light"] .philosophy-side-nav a,.agency-site[data-theme="light"] .philosophy-scroll,.agency-site[data-theme="light"] .philosophy-story{color:#f8f2e6}
+.agency-site[data-theme="light"] .philosophy-intro h2 em,.agency-site[data-theme="light"] .philosophy-eyebrow,.agency-site[data-theme="light"] .philosophy-handwriting,.agency-site[data-theme="light"] .philosophy-bottom-copy,.agency-site[data-theme="light"] .philosophy-seal{color:#d7b36a}
+.agency-site[data-theme="light"] .philosophy-eyebrow i,.agency-site[data-theme="light"] .philosophy-side-nav i,.agency-site[data-theme="light"] .philosophy-scroll>span{border-color:#c9a45c;background-color:#c9a45c}
+.agency-site[data-theme="light"] .philosophy-story>span{color:#d7b36a;border-color:#c9a45c;background:rgba(248,242,230,.08)}
+.agency-site[data-theme="light"] .philosophy-edit-tools{color:#e0cfad}.agency-site[data-theme="light"] .philosophy-edit-tools button{color:#f8f2e6;border-color:#c9a45c;background:rgba(248,242,230,.07)}
+.agency-site[data-theme="light"] .philosophy-card{color:#26342d;border-color:rgba(255,248,232,.9);background:linear-gradient(140deg,rgba(255,250,240,.96),rgba(245,232,207,.94) 56%,rgba(255,250,240,.96))}.agency-site[data-theme="light"] .philosophy-card__description{color:#3b443d}
+.agency-site[data-theme="light"] .project-process{--process-cream:#0f3b2e;--process-ink:#f8f2e6;--process-gold:#d7b36a;background:radial-gradient(ellipse at 50% 45%,rgba(25,75,57,.96) 0%,rgba(15,59,46,.98) 62%,rgba(8,44,35,.99) 100%);color:#f8f2e6}
+.agency-site[data-theme="light"] .project-process h2,.agency-site[data-theme="light"] .project-process-stage h3{color:#f8f2e6}.agency-site[data-theme="light"] .project-process h2 em,.agency-site[data-theme="light"] .project-process-number,.agency-site[data-theme="light"] .project-process-eyebrow{color:#d7b36a}.agency-site[data-theme="light"] .project-process-subtitle,.agency-site[data-theme="light"] .project-process-stage p{color:#e4e9df}.agency-site[data-theme="light"] .project-process-timeline::before{background:#c9a45c}.agency-site[data-theme="light"] .project-process-dot{background:#c9a45c;border-color:#0f3b2e;box-shadow:0 0 0 1px #c9a45c}
+@media(max-width:900px){.nav-actions{gap:8px}.theme-toggle{min-width:78px;min-height:39px;padding:0 10px}}
+/* Alternating section background rhythm for both themes.
+   Dark: green / cream / green / cream ...
+   Light: cream / green / cream / green ...
+*/
+.agency-site[data-theme="dark"] .hero,
+.agency-site[data-theme="dark"] .services-showcase,
+.agency-site[data-theme="dark"] .our-portfolio,
+.agency-site[data-theme="dark"] .contact-brief {
+  background:linear-gradient(135deg,#123f31 0%,#0f3b2e 58%,#082c23 100%) !important;
+}
+.agency-site[data-theme="dark"] .philosophy-section,
+.agency-site[data-theme="dark"] .project-process,
+.agency-site[data-theme="dark"] .client-stories {
+  background:linear-gradient(135deg,#fbf6eb 0%,#f4ead8 100%) !important;
+  color:#1e332a;
+}
+.agency-site[data-theme="dark"] .client-stories {
+  --stories-ink:#1e332a;
+  --stories-muted:#526258;
+}
+/* The section wrapper was cream, but its nested hero still painted itself green.
+   Override that inner surface too so Client Stories is truly cream in dark mode. */
+.agency-site[data-theme="dark"] .client-stories .client-stories__hero {
+  background:linear-gradient(135deg,#fbf6eb 0%,#f4ead8 100%) !important;
+}
+.agency-site[data-theme="dark"] .client-stories .client-stories__hero::before {
+  opacity:.055;
+}
+.agency-site[data-theme="dark"] .client-stories .client-stories__copy h2,
+.agency-site[data-theme="dark"] .client-stories .client-stories__copy p,
+.agency-site[data-theme="dark"] .client-stories .client-stories__eyebrow,
+.agency-site[data-theme="dark"] .client-stories .client-stories__secondary,
+.agency-site[data-theme="dark"] .client-stories .client-stories__secondary b { color:#1e332a !important; }
+.agency-site[data-theme="dark"] .client-stories .client-stories__copy h2 em { color:#a77932 !important; }
+.agency-site[data-theme="dark"] .client-stories .client-stories__copy p { color:#526258 !important; }
+.agency-site[data-theme="dark"] .client-stories .client-stories__secondary > span { color:#1e332a;border-color:#a77932; }
+.agency-site[data-theme="dark"] .client-stories .client-stories__primary { color:#102d24; }
+.agency-site[data-theme="dark"] .client-stories .client-stories__trust { background:rgba(255,255,255,.28); }
+.agency-site[data-theme="dark"] .client-stories .client-stories__metrics { background:#f4ead8; }
+.agency-site[data-theme="dark"] .philosophy-section {
+  --ph-ink:#1e332a;
+  --ph-gold:#a77932;
+  --ph-gold-deep:#986b2e;
+}
+.agency-site[data-theme="dark"] .philosophy-intro h2,
+.agency-site[data-theme="dark"] .philosophy-intro>p,
+.agency-site[data-theme="dark"] .philosophy-side-nav a,
+.agency-site[data-theme="dark"] .philosophy-scroll { color:#1e332a; }
+
+.agency-site[data-theme="dark"] .philosophy-story,
+.agency-site[data-theme="dark"] .philosophy-story > span {
+  color:#FFFFFF!important;
+}
+.agency-site[data-theme="dark"] .philosophy-intro h2 em,
+.agency-site[data-theme="dark"] .philosophy-eyebrow,
+.agency-site[data-theme="dark"] .philosophy-handwriting,
+.agency-site[data-theme="dark"] .philosophy-bottom-copy,
+.agency-site[data-theme="dark"] .philosophy-seal { color:#a77932; }
+.agency-site[data-theme="dark"] .philosophy-card { color:#26342d; }
+.agency-site[data-theme="dark"] .project-process h2,
+.agency-site[data-theme="dark"] .project-process-stage h3 { color:#1e332a; }
+.agency-site[data-theme="dark"] .project-process h2 em,
+.agency-site[data-theme="dark"] .project-process-number,
+.agency-site[data-theme="dark"] .project-process-eyebrow { color:#a77932; }
+.agency-site[data-theme="dark"] .project-process-subtitle,
+.agency-site[data-theme="dark"] .project-process-stage p { color:#4f5d55; }
+.agency-site[data-theme="dark"] .project-process-timeline::before { background:#b8893e; }
+.agency-site[data-theme="dark"] .project-process-dot { background:#b8893e;border-color:#fbf6eb;box-shadow:0 0 0 1px #b8893e; }
+.agency-site[data-theme="dark"] .client-stories h2,
+.agency-site[data-theme="dark"] .client-stories p,
+.agency-site[data-theme="dark"] .client-stories__eyebrow,
+.agency-site[data-theme="dark"] .client-stories__note { color:#1e332a; }
+.agency-site[data-theme="dark"] .client-stories h2 em,
+.agency-site[data-theme="dark"] .client-stories__eyebrow span,
+.agency-site[data-theme="dark"] .client-stories__note em { color:#a77932; }
+.agency-site[data-theme="dark"] .client-stories__card { color:#1e332a; }
+.agency-site[data-theme="light"] .hero,
+.agency-site[data-theme="light"] .contact-brief,
+.agency-site[data-theme="light"] .services-showcase,
+.agency-site[data-theme="light"] .our-portfolio,
+.agency-site[data-theme="light"] .footer {
+  background:linear-gradient(135deg,#fbf6eb 0%,#f4ead8 100%) !important;
+}
+.agency-site[data-theme="light"] .philosophy-section,
+.agency-site[data-theme="light"] .project-process,
+.agency-site[data-theme="light"] .client-stories {
+  background:linear-gradient(135deg,#123f31 0%,#0f3b2e 58%,#082c23 100%) !important;
+  color:#f8f2e6;
+}
+.agency-site[data-theme="light"] .client-stories .client-stories__metrics {
+  background:linear-gradient(135deg,#123f31 0%,#0f3b2e 58%,#082c23 100%) !important;
+  color:#f8f2e6;
+  border-top-color:rgba(248,242,230,.16);
+}
+.agency-site[data-theme="light"] .client-stories .client-stories__metric {
+  border-right-color:rgba(248,242,230,.24);
+}
+.agency-site[data-theme="light"] .client-stories .client-stories__metric strong,
+.agency-site[data-theme="light"] .client-stories .client-stories__metric > div > span {
+  color:#f8f2e6;
+}
+.agency-site[data-theme="light"] .client-stories .client-stories__metric-icon {
+  background:rgba(248,242,230,.12);
+  color:#d7b36a;
+}
+.agency-site[data-theme="light"] .client-stories .client-stories__metric-icon svg {
+  stroke:currentColor;
+}
+/* Gold framing improves separation and visibility of the green metrics band. */
+.agency-site[data-theme="light"] .client-stories .client-stories__metrics {
+  border:1px solid rgba(215,179,106,.9);
+  box-shadow:inset 0 1px 0 rgba(255,231,174,.35),0 0 0 1px rgba(215,179,106,.18);
+}
+.agency-site[data-theme="light"] .client-stories .client-stories__metric-icon {
+  border:1px solid rgba(215,179,106,.78);
+}
+.agency-site[data-theme="light"] .client-stories .client-stories__metric strong {
+  text-shadow:0 1px 8px rgba(0,0,0,.12);
+}
+/* Shared premium gold frame and soft luminous edge in BOTH themes. */
+.agency-site .client-stories .client-stories__metrics {
+  position:relative;
+  border:1px solid rgba(215,179,106,.9) !important;
+  border-radius:20px;
+  box-shadow:
+    inset 0 1px 0 rgba(255,231,174,.32),
+    0 0 0 1px rgba(215,179,106,.22),
+    0 8px 26px rgba(8,35,27,.08);
+  overflow:hidden;
+}
+.agency-site .client-stories .client-stories__metrics::before,
+.agency-site .client-stories .client-stories__metrics::after {
+  content:"";
+  position:absolute;
+  left:38%;
+  width:24%;
+  height:1px;
+  pointer-events:none;
+  background:linear-gradient(90deg,transparent,rgba(255,222,142,.98),transparent);
+  box-shadow:0 0 8px rgba(255,208,100,.62);
+}
+.agency-site .client-stories .client-stories__metrics::before { top:0; }
+.agency-site .client-stories .client-stories__metrics::after { bottom:0; }
+.agency-site .client-stories .client-stories__metric-icon {
+  border:1px solid rgba(215,179,106,.72);
+  box-shadow:0 0 0 3px rgba(215,179,106,.07);
+}
+.agency-site .client-stories .client-stories__metric {
+  border-right-color:rgba(190,145,63,.42);
+}
+@media(max-width:760px){
+  .agency-site .client-stories .client-stories__metrics { border-radius:15px; }
+  .agency-site .client-stories .client-stories__metric:nth-child(odd) { border-right-color:rgba(190,145,63,.42); }
+}
+.agency-site[data-theme="dark"] .footer{background:linear-gradient(135deg,#fbf6eb 0%,#f4ead8 100%) !important;color:#1e332a}.agency-site[data-theme="dark"] .footer .brand-wordmark{color:#0f3b2e}
+.agency-site[data-theme="light"] .footer{background:linear-gradient(135deg,#123f31 0%,#0f3b2e 58%,#082c23 100%) !important;color:#f8f2e6}.agency-site[data-theme="light"] .footer .brand-wordmark{color:#f8f2e6}
+@media(max-width:640px){.nav-actions{gap:7px}.theme-toggle{min-width:38px;width:38px;height:38px;padding:0}.theme-toggle span{display:none}.brand-wordmark{font-size:27px}}
+
+/* FINAL SOCIALURE PALETTE — use only the approved green and cream as core colors.
+   Dark theme alternates green/cream; light theme alternates cream/green. */
+.agency-site {
+  --brand-green:#0F3D3A;
+  --brand-cream:#F5DABF;
+  --green:#0F3D3A;
+  --forest:#164A45;
+  --ivory:#F5DABF;
+  --gold:#D0A45C;
+  --muted:#D8C1A9;
+  --line:rgba(245,218,191,.2);
+  color:#F5DABF;
+  background-color:#0F3D3A;
+}
+.agency-site[data-theme="dark"] {
+  --green:#0F3D3A;
+  --forest:#164A45;
+  --ivory:#F5DABF;
+  --gold:#D0A45C;
+  --muted:#D8C1A9;
+  --line:rgba(245,218,191,.2);
+  color:#F5DABF;
+  background:#0F3D3A;
+}
+.agency-site[data-theme="light"] {
+  --green:#F5DABF;
+  --forest:#F5DABF;
+  --ivory:#0F3D3A;
+  --gold:#D0A45C;
+  --muted:#315D57;
+  --line:rgba(15,61,58,.22);
+  color:#0F3D3A;
+  background:#F5DABF;
+  background-image:none;
+}
+.agency-site[data-theme="dark"] .hero,
+.agency-site[data-theme="dark"] .services-showcase,
+.agency-site[data-theme="dark"] .our-portfolio,
+.agency-site[data-theme="dark"] .contact-brief,
+.agency-site[data-theme="dark"] .footer,
+.agency-site[data-theme="dark"] .philosophy-section,
+.agency-site[data-theme="dark"] .project-process,
+.agency-site[data-theme="dark"] .client-stories {
+  background-color:#0F3D3A !important;
+  color:#F5DABF;
+}
+.agency-site[data-theme="dark"] .philosophy-section,
+.agency-site[data-theme="dark"] .project-process,
+.agency-site[data-theme="dark"] .client-stories {
+  background-image:linear-gradient(135deg,#0F3D3A,#164A45) !important;
+}
+.agency-site[data-theme="dark"] .client-stories .client-stories__hero,
+.agency-site[data-theme="dark"] .client-stories .client-stories__metrics {
+  background:#F5DABF !important;
+  color:#0F3D3A;
+}
+.agency-site[data-theme="light"] .hero,
+.agency-site[data-theme="light"] .services-showcase,
+.agency-site[data-theme="light"] .our-portfolio,
+.agency-site[data-theme="light"] .contact-brief,
+.agency-site[data-theme="light"] .footer {
+  background:#F5DABF !important;
+  color:#0F3D3A;
+}
+.agency-site[data-theme="light"] .philosophy-section,
+.agency-site[data-theme="light"] .project-process,
+.agency-site[data-theme="light"] .client-stories,
+.agency-site[data-theme="light"] .client-stories .client-stories__hero,
+.agency-site[data-theme="light"] .client-stories .client-stories__metrics {
+  background:#0F3D3A !important;
+  background-image:linear-gradient(135deg,#0F3D3A,#164A45) !important;
+  color:#F5DABF;
+}
+.agency-site[data-theme="light"] .client-stories .client-stories__metric strong,
+.agency-site[data-theme="light"] .client-stories .client-stories__metric > div > span,
+.agency-site[data-theme="light"] .client-stories .client-stories__copy h2,
+.agency-site[data-theme="light"] .client-stories .client-stories__copy p,
+.agency-site[data-theme="light"] .client-stories .client-stories__eyebrow,
+.agency-site[data-theme="light"] .client-stories .client-stories__secondary,
+.agency-site[data-theme="light"] .client-stories .client-stories__secondary b {
+  color:#F5DABF !important;
+}
+.agency-site[data-theme="light"] .client-stories .client-stories__card {
+  background:#F5DABF;
+  color:#0F3D3A;
+}
+.agency-site[data-theme="light"] .client-stories .client-stories__card blockquote,
+.agency-site[data-theme="light"] .client-stories .client-stories__person strong {
+  color:#0F3D3A;
+}
+.agency-site[data-theme="light"] .topbar {
+  background:rgba(245,218,191,.96);
+  border-bottom-color:rgba(15,61,58,.22);
+}
+.agency-site[data-theme="light"] .nav a,
+.agency-site[data-theme="light"] .brand-wordmark,
+.agency-site[data-theme="light"] .brand-copy strong,
+.agency-site[data-theme="light"] .menu-toggle { color:#0F3D3A; }
+.agency-site[data-theme="light"] .nav-cta,
+.agency-site[data-theme="light"] .button--gold,
+.agency-site[data-theme="light"] .contact-brief__submit {
+  background:linear-gradient(145deg,#164A45 0%,#0F3D3A 70%,#0A302E 100%);
+  color:#F5DABF;
+  border:1px solid #D0A45C;
+  box-shadow:0 12px 22px rgba(15,61,58,.24),0 5px 9px rgba(15,61,58,.16),inset 0 1px 0 rgba(245,218,191,.16);
+}
+.agency-site[data-theme="light"] .hero-actions .button--outline {
+  background:linear-gradient(145deg,rgba(255,244,227,.96),rgba(245,218,191,.9));
+  color:#0F3D3A;
+  border:1px solid #D0A45C;
+  box-shadow:0 10px 20px rgba(15,61,58,.13),0 3px 6px rgba(15,61,58,.09),inset 0 1px 0 rgba(255,255,255,.78);
+}
+.agency-site[data-theme="dark"] .hero-actions .button--outline {
+  background:linear-gradient(145deg,rgba(22,74,69,.72),rgba(10,48,46,.92));
+  color:#F5DABF;
+  border:1px solid rgba(208,164,92,.9);
+  box-shadow:0 10px 22px rgba(0,0,0,.2),inset 0 1px 0 rgba(245,218,191,.12);
+}
+.agency-site[data-theme="dark"] .hero-actions .button--gold {
+  background:#6C151E !important;
+  color:#FFFFFF !important;
+  border:1px solid #6C151E !important;
+  box-shadow:0 9px 20px rgba(108,21,30,.24) !important;
+}
+.agency-site[data-theme="light"] .theme-toggle {
+  background:#F5DABF;
+  color:#0F3D3A;
+  border-color:rgba(15,61,58,.35);
+}
+.agency-site[data-theme="light"] .theme-toggle svg,
+.agency-site[data-theme="light"] .eyebrow,
+.agency-site[data-theme="light"] .hero .eyebrow,
+.agency-site[data-theme="light"] .capabilities,
+.agency-site[data-theme="light"] h1 em,
+.agency-site[data-theme="light"] h2 em {
+  color:#0F3D3A;
+}
+.agency-site[data-theme="light"] .hero-description,
+.agency-site[data-theme="light"] .section-heading>p,
+.agency-site[data-theme="light"] .service-card p,
+.agency-site[data-theme="light"] .about>p {
+  color:#315D57;
+}
+.agency-site[data-theme="light"] .concept-card,
+.agency-site[data-theme="light"] .services-showcase-card {
+  background:rgba(245,218,191,.65);
+  border-color:rgba(15,61,58,.25);
+  color:#0F3D3A;
+}
+.agency-site[data-theme="light"] .contact-brief__form-panel,
+.agency-site[data-theme="light"] .contact-brief__story {
+  background-color:#F5DABF;
+}
+.agency-site .client-stories .client-stories__metrics {
+  border-color:#D0A45C !important;
+}
+.agency-site .client-stories .client-stories__metric-icon {
+  border-color:#D0A45C;
+}
+
+/* Final section rhythm + contrast fixes using the approved brand colors only. */
+.agency-site[data-theme="dark"] .hero,
+.agency-site[data-theme="dark"] .our-portfolio,
+.agency-site[data-theme="dark"] .project-process,
+.agency-site[data-theme="dark"] .philosophy-section,
+.agency-site[data-theme="dark"] .footer {
+  background:#0F3D3A !important;
+  background-image:none !important;
+  color:#F5DABF !important;
+}
+.agency-site[data-theme="dark"] .services-showcase,
+.agency-site[data-theme="dark"] .client-stories,
+.agency-site[data-theme="dark"] .contact-brief {
+  background:#F5DABF !important;
+  background-image:none !important;
+  color:#0F3D3A !important;
+}
+.agency-site[data-theme="light"] .hero,
+.agency-site[data-theme="light"] .our-portfolio,
+.agency-site[data-theme="light"] .project-process,
+.agency-site[data-theme="light"] .philosophy-section,
+.agency-site[data-theme="light"] .footer {
+  background:#F5DABF !important;
+  background-image:none !important;
+  color:#0F3D3A !important;
+}
+.agency-site[data-theme="light"] .services-showcase,
+.agency-site[data-theme="light"] .client-stories,
+.agency-site[data-theme="light"] .contact-brief {
+  background:#0F3D3A !important;
+  background-image:none !important;
+  color:#F5DABF !important;
+}
+
+/* Headings, supporting copy and controls follow each section's actual surface. */
+.agency-site[data-theme="dark"] .services-showcase,
+.agency-site[data-theme="dark"] .services-showcase h1,
+.agency-site[data-theme="dark"] .services-showcase h2,
+.agency-site[data-theme="dark"] .services-showcase h3,
+.agency-site[data-theme="dark"] .services-showcase p,
+.agency-site[data-theme="dark"] .services-showcase .services-showcase-heading>p,
+.agency-site[data-theme="dark"] .contact-brief,
+.agency-site[data-theme="dark"] .contact-brief .contact-brief__story h2,
+.agency-site[data-theme="dark"] .contact-brief .contact-brief__form-wrap h3,
+.agency-site[data-theme="dark"] .contact-brief .contact-brief__eyebrow,
+.agency-site[data-theme="dark"] .contact-brief .contact-brief__intro,
+.agency-site[data-theme="dark"] .contact-brief .contact-brief__detail,
+.agency-site[data-theme="dark"] .contact-brief form label {
+  color:#0F3D3A !important;
+}
+.agency-site[data-theme="dark"] .contact-brief__story {
+  background-color:#F5DABF !important;
+  background-image:linear-gradient(90deg,rgba(245,218,191,.76),rgba(245,218,191,.88) 58%,rgba(245,218,191,.76)),url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1600&q=85') !important;
+}
+.agency-site[data-theme="dark"] .contact-brief__story::after { background:linear-gradient(90deg,rgba(245,218,191,.12),rgba(245,218,191,.04) 58%,rgba(245,218,191,.15)) !important; }
+.agency-site[data-theme="dark"] .contact-brief__form-panel { background:#F5DABF !important; }
+.agency-site[data-theme="dark"] .contact-brief form input,
+.agency-site[data-theme="dark"] .contact-brief form select,
+.agency-site[data-theme="dark"] .contact-brief form textarea {
+  background:rgba(255,255,255,.52) !important;
+  color:#0F3D3A !important;
+  border-color:rgba(15,61,58,.32) !important;
+}
+.agency-site[data-theme="dark"] .contact-brief form input::placeholder,
+.agency-site[data-theme="dark"] .contact-brief form textarea::placeholder,
+.agency-site[data-theme="dark"] .contact-brief .contact-brief__subtext { color:rgba(15,61,58,.72) !important; }
+.agency-site[data-theme="dark"] .contact-brief form select option { background:#F5DABF !important;color:#0F3D3A !important; }
+.agency-site[data-theme="dark"] .contact-brief__submit { background:#6C151E !important;color:#F5DABF !important;border:1px solid #6C151E !important; }
+.agency-site[data-theme="dark"] .contact-brief__socials a { color:#0F3D3A !important;border-color:#0F3D3A !important; }
+.agency-site[data-theme="dark"] .contact-brief__detail { border-bottom-color:rgba(15,61,58,.25) !important; }
+.agency-site[data-theme="light"] .services-showcase,
+.agency-site[data-theme="light"] .services-showcase h1,
+.agency-site[data-theme="light"] .services-showcase h2,
+.agency-site[data-theme="light"] .services-showcase h3,
+.agency-site[data-theme="light"] .services-showcase p,
+.agency-site[data-theme="light"] .client-stories,
+.agency-site[data-theme="light"] .contact-brief,
+.agency-site[data-theme="light"] .contact-brief .contact-brief__story h2,
+.agency-site[data-theme="light"] .contact-brief .contact-brief__form-wrap h3,
+.agency-site[data-theme="light"] .contact-brief .contact-brief__eyebrow,
+.agency-site[data-theme="light"] .contact-brief .contact-brief__intro,
+.agency-site[data-theme="light"] .contact-brief .contact-brief__detail,
+.agency-site[data-theme="light"] .contact-brief form label { color:#F5DABF !important; }
+.agency-site[data-theme="light"] .contact-brief__story { background-color:#0F3D3A !important;background-image:linear-gradient(90deg,rgba(15,61,58,.78),rgba(15,61,58,.88) 58%,rgba(15,61,58,.76)),url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1600&q=85') !important; }
+.agency-site[data-theme="light"] .contact-brief__form-panel { background:#0F3D3A !important; }
+.agency-site[data-theme="light"] .contact-brief form input,
+.agency-site[data-theme="light"] .contact-brief form select,
+.agency-site[data-theme="light"] .contact-brief form textarea { background:rgba(245,218,191,.08) !important;color:#F5DABF !important;border-color:rgba(245,218,191,.28) !important; }
+.agency-site[data-theme="light"] .contact-brief form input::placeholder,
+.agency-site[data-theme="light"] .contact-brief form textarea::placeholder,
+.agency-site[data-theme="light"] .contact-brief .contact-brief__subtext { color:rgba(245,218,191,.72) !important; }
+.agency-site[data-theme="light"] .contact-brief__submit { background:#F5DABF !important;color:#0F3D3A !important;border:1px solid #D0A45C !important; }
+.agency-site[data-theme="light"] .contact-brief__socials a { color:#F5DABF !important;border-color:#D0A45C !important; }
+
+/* Dark theme: cream background for Our Services; preserve its existing text colors/content. */
+.agency-site[data-theme="dark"] .services-showcase {
+  background: #F5DABF !important;
+  background-image: none !important;
+}
+
+/* Philosophy: all nine moving-card numbers use burgundy in both themes. */
+.agency-site .philosophy-card__number {
+  color: #6C151E !important;
+}

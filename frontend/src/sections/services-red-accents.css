@@ -1,0 +1,12 @@
+/* Burgundy accents for Our Services — keep the existing layout and styling intact. */
+.agency-site .services-showcase .services-showcase-number {
+  color: #6C151E !important;
+  text-shadow: none !important;
+}
+.agency-site .services-showcase .services-showcase-arrow,
+.agency-site .services-showcase .services-showcase-arrow:hover,
+.agency-site .services-showcase .services-showcase-arrow:focus-visible {
+  background: #6C151E !important;
+  border-color: #6C151E !important;
+  color: #FFFFFF !important;
+}

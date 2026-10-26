@@ -1,0 +1,595 @@
+/* Socialure brand color unification: one exact green across both themes. */
+.agency-site{
+  --brand-green:#0F3D3A;
+  --green:#0F3D3A;
+  --forest:#0F3D3A;
+  --portfolio-green:#0F3D3A;
+  --portfolio-green-deep:#0F3D3A;
+  --svc-green:#0F3D3A;
+  --svc-green-deep:#0F3D3A;
+  --process-green:#0F3D3A;
+  --brand-cream:#F5DABF;
+}
+:root{--green:#0F3D3A;--forest:#0F3D3A}
+body,.agency-site{background-color:#0F3D3A}
+.agency-site[data-theme="dark"] .hero:not(.hero-arch-image-only),
+.agency-site[data-theme="dark"] .our-portfolio,
+.agency-site[data-theme="dark"] .contact-brief,
+.agency-site[data-theme="light"] .philosophy-section,
+.agency-site[data-theme="light"] .project-process,
+.agency-site[data-theme="light"] .client-stories{
+  background:#0F3D3A!important;
+}
+.agency-site .hero-arch-art,
+.agency-site .arch-inner,
+.agency-site .arch-green-panel,
+.agency-site .services-showcase,
+.agency-site .our-portfolio,
+.agency-site .contact-brief,
+.agency-site .project-process{
+  --green:#0F3D3A;
+  --forest:#0F3D3A;
+}
+.agency-site .contact-brief__submit,
+.agency-site .our-portfolio__view-all{
+  background:#0F3D3A!important;
+  color:#F5DABF!important;
+  border-color:#0F3D3A;
+  box-shadow:0 9px 20px rgba(15,61,58,.24);
+}
+.agency-site .hero-arch .button--gold,
+.agency-site .hero-arch .button--gold:hover,
+.agency-site .hero-arch .button--gold:focus-visible{
+  background:#6C151E!important;
+  color:#FFFFFF!important;
+  border-color:#6C151E!important;
+  box-shadow:0 9px 20px rgba(108,21,30,.24)!important;
+}
+.agency-site .hero-image-button-primary,
+.agency-site .hero-image-button-primary:hover,
+.agency-site .hero-image-button-primary:focus-visible{
+  background:#6C151E!important;
+  color:#FFFFFF!important;
+  border-color:#6C151E!important;
+  box-shadow:0 9px 20px rgba(108,21,30,.24)!important;
+}
+.agency-site .nav-cta,
+.agency-site .nav-cta:hover,
+.agency-site .nav-cta:focus-visible{
+  background:#6C151E!important;
+  color:#FFFFFF!important;
+  border-color:#6C151E!important;
+  box-shadow:0 3px 12px rgba(108,21,30,.28)!important;
+}
+.agency-site .philosophy-cta{
+  background:#6C151E!important;
+  color:#FFFFFF!important;
+  border:1px solid #6C151E!important;
+  box-shadow:0 4px 14px rgba(108,21,30,.32)!important;
+}
+.agency-site .philosophy-cta:hover,
+.agency-site .philosophy-cta:focus-visible{
+  background:#841b26!important;
+  border-color:#841b26!important;
+  color:#FFFFFF!important;
+  box-shadow:0 8px 22px rgba(108,21,30,.45)!important;
+}
+.agency-site .hero-arch .button--gold:hover,
+.agency-site .hero-image-button-primary:hover,
+.agency-site .nav-cta:hover{
+  background:#0F3D3A!important;
+  box-shadow:0 12px 24px rgba(15,61,58,.32);
+}
+.agency-site .hero-image-title,
+.agency-site .hero-image-copy,
+.agency-site .hero-image-description,
+.agency-site .hero-image-capabilities{
+  --brand-green:#0F3D3A;
+}
+.agency-site .hero-image-title{color:#0F3D3A}
+.agency-site[data-theme="dark"] .hero-image-title{color:#F5DABF}
+
+/* The mobile hero canvas stays cream even when the site's theme is dark. */
+@media (max-width:640px){
+  .agency-site[data-theme="dark"] .hero.hero-arch-image-only{
+    background:#F5DABF!important;
+    background-color:#F5DABF!important;
+  }
+}
+
+/* Footer theme colors: light = exact green, dark = exact cream. */
+.agency-site[data-theme="light"] .footer{
+  background:#0F3D3A!important;
+  color:#F5DABF!important;
+  border-top-color:rgba(245,218,191,.22)!important;
+}
+.agency-site[data-theme="light"] .footer .brand-wordmark,
+.agency-site[data-theme="light"] .footer .brand-copy strong,
+.agency-site[data-theme="light"] .footer>span{
+  color:#F5DABF!important;
+}
+.agency-site[data-theme="dark"] .footer{
+  background:#F5DABF!important;
+  color:#0F3D3A!important;
+  border-top-color:rgba(15,61,58,.22)!important;
+}
+.agency-site[data-theme="dark"] .footer .brand-wordmark,
+.agency-site[data-theme="dark"] .footer .brand-copy strong,
+.agency-site[data-theme="dark"] .footer>span{
+  color:#0F3D3A!important;
+}
+.agency-site .hero-image-title .hero-image-bordo{color:#6C151E}
+
+/* Keep “Enduring” gold; only “Value.” is burgundy red. */
+.agency-site .philosophy-section .philosophy-intro h2 em{
+  color:#D0A45C!important;
+}
+.agency-site .philosophy-section .philosophy-intro h2 em .philosophy-value-word{
+  color:#6C151E!important;
+}
+
+/* Burgundy eyebrow and Runs; keep Project in the original gold. */
+.agency-site .project-process .project-process-eyebrow{
+  color:#6C151E!important;
+}
+.agency-site .project-process .project-process-eyebrow span{
+  background:#6C151E!important;
+  background-color:#6C151E!important;
+}
+.agency-site .project-process h2 em{
+  color:#D0A45C!important;
+}
+.agency-site .project-process h2 em .project-project-word{
+  color:#D0A45C!important;
+}
+.agency-site .project-process h2 em .project-runs-word{
+  color:#6C151E!important;
+}
+
+/* Philosophy eyebrow label and its horizontal accent line in burgundy red. */
+.agency-site .philosophy-eyebrow,
+.agency-site .philosophy-eyebrow > span{
+  color:#6C151E!important;
+}
+.agency-site .philosophy-eyebrow i{
+  background:#6C151E!important;
+}
+
+/* Consistent alternating section rhythm from hero through footer.
+   Dark theme: cream, green, cream, green... Light theme reverses it. */
+.agency-site[data-theme="dark"] .hero{
+  color:#0F3D3A!important;
+}
+.agency-site[data-theme="dark"] .hero .eyebrow,
+.agency-site[data-theme="dark"] .hero h1,
+.agency-site[data-theme="dark"] .hero .hero-description,
+.agency-site[data-theme="dark"] .hero .capabilities{
+  color:#0F3D3A!important;
+}
+.agency-site[data-theme="dark"] .hero h1 .hero-highlight,
+.agency-site[data-theme="dark"] .hero h1 .text-gold{
+  color:#B98538!important;
+}
+.agency-site[data-theme="dark"] .hero h1 .hero-bordo,
+.agency-site[data-theme="dark"] .hero h1 .bordo,
+.agency-site[data-theme="dark"] .hero h1 .text-bordo{
+  color:#6C151E!important;
+}
+.agency-site[data-theme="dark"] .philosophy-section,
+.agency-site[data-theme="dark"] .project-process,
+.agency-site[data-theme="dark"] .client-stories{
+  background:#0F3D3A!important;
+  background-image:none!important;
+  color:#F5DABF!important;
+}
+.agency-site[data-theme="dark"] .services-showcase,
+.agency-site[data-theme="dark"] .our-portfolio,
+.agency-site[data-theme="dark"] .contact-brief{
+  background:#F5DABF!important;
+  background-image:none!important;
+  color:#0F3D3A!important;
+}
+.agency-site[data-theme="dark"] .services-showcase .services-showcase-heading h2,
+.agency-site[data-theme="dark"] .services-showcase .services-showcase-heading h2 .services-showcase-title-main,
+.agency-site[data-theme="dark"] .services-showcase .services-showcase-heading>p{
+  color:#0F3D3A!important;
+}
+.agency-site[data-theme="dark"] .footer{
+  background:#0F3D3A!important;
+  color:#F5DABF!important;
+}
+.agency-site[data-theme="dark"] .services-showcase-card .services-showcase-copy h3{
+  color:#fffaf0!important;
+}
+.agency-site[data-theme="dark"] .services-showcase-card .services-showcase-copy p{
+  color:#e8e2d7!important;
+}
+.agency-site[data-theme="dark"] .our-portfolio h1,
+.agency-site[data-theme="dark"] .our-portfolio h2,
+.agency-site[data-theme="dark"] .our-portfolio p,
+.agency-site[data-theme="dark"] .contact-brief h1,
+.agency-site[data-theme="dark"] .contact-brief h2,
+.agency-site[data-theme="dark"] .contact-brief p{
+  color:#0F3D3A;
+}
+.agency-site[data-theme="dark"] .project-process h1,
+.agency-site[data-theme="dark"] .project-process h2,
+.agency-site[data-theme="dark"] .project-process h3,
+.agency-site[data-theme="dark"] .project-process-stage h3,
+.agency-site[data-theme="dark"] .philosophy-section h1,
+.agency-site[data-theme="dark"] .philosophy-section h2,
+.agency-site[data-theme="dark"] .philosophy-section p,
+.agency-site[data-theme="dark"] .client-stories h1,
+.agency-site[data-theme="dark"] .client-stories h2,
+.agency-site[data-theme="dark"] .client-stories p{
+  color:#F5DABF!important;
+}
+.agency-site[data-theme="dark"] .project-process p,
+.agency-site[data-theme="dark"] .project-process-subtitle,
+.agency-site[data-theme="dark"] .project-process-stage p{
+  color:#e4e9df!important;
+}
+.agency-site[data-theme="dark"] .project-process-dot{
+  border-color:#0F3D3A!important;
+}
+.agency-site[data-theme="dark"] .client-stories,
+.agency-site[data-theme="dark"] .client-stories .client-stories__hero,
+.agency-site[data-theme="dark"] .client-stories .client-stories__metrics{
+  background:#0F3D3A!important;
+  background-image:none!important;
+}
+.agency-site[data-theme="dark"] .client-stories .client-stories__hero::before{
+  display:none!important;
+}
+.agency-site[data-theme="dark"] .client-stories .client-stories__copy h2,
+.agency-site[data-theme="dark"] .client-stories .client-stories__eyebrow,
+.agency-site[data-theme="dark"] .client-stories .client-stories__secondary,
+.agency-site[data-theme="dark"] .client-stories .client-stories__secondary b{
+  color:#F5DABF!important;
+}
+.agency-site[data-theme="dark"] .client-stories .client-stories__copy p{
+  color:#e4e9df!important;
+}
+.agency-site[data-theme="dark"] .client-stories .client-stories__secondary > span{
+  color:#F5DABF!important;
+  border-color:#D0A45C!important;
+}
+.agency-site[data-theme="dark"] .client-stories .client-stories__metrics{
+  border-top:1px solid rgba(245,218,191,.2)!important;
+}
+.agency-site[data-theme="dark"] .client-stories .client-stories__metric strong{
+  color:#F5DABF!important;
+}
+.agency-site[data-theme="dark"] .client-stories .client-stories__metric > div > span{
+  color:#d5e2dc!important;
+}
+.agency-site[data-theme="dark"] .client-stories .client-stories__metric-icon{
+  background:rgba(245,218,191,.15)!important;
+  color:#D0A45C!important;
+}
+.agency-site[data-theme="dark"] .client-stories .client-stories__metric{
+  border-right-color:rgba(245,218,191,.2)!important;
+}
+.agency-site[data-theme="light"] .hero,
+.agency-site[data-theme="light"] .our-portfolio,
+.agency-site[data-theme="light"] .project-process,
+.agency-site[data-theme="light"] .contact-brief{
+  color:#0F3D3A!important;
+}
+.agency-site[data-theme="light"] .services-showcase{
+  background:#F5DABF!important;
+  background-image:none!important;
+  color:#0F3D3A!important;
+}
+.agency-site[data-theme="light"] .services-showcase .services-showcase-heading h2,
+.agency-site[data-theme="light"] .services-showcase .services-showcase-heading h2 .services-showcase-title-main,
+.agency-site[data-theme="light"] .services-showcase .services-showcase-heading>p{
+  color:#0F3D3A!important;
+}
+.agency-site[data-theme="light"] .services-showcase-card {
+  background: #0F3D3A !important;
+  border-color: #D0A45C !important;
+  box-shadow: 0 8px 22px rgba(15,61,58,.22), 0 2px 5px rgba(0,0,0,.08) !important;
+}
+.agency-site[data-theme="light"] .services-showcase-card .services-showcase-card-body {
+  background: #0F3D3A !important;
+}
+.agency-site[data-theme="light"] .services-showcase-card .services-showcase-icon {
+  background: #06271f !important;
+  color: #f4c77b !important;
+  border-color: #D0A45C !important;
+}
+.agency-site[data-theme="light"] .services-showcase-card .services-showcase-copy h3 {
+  color: #fffaf0 !important;
+}
+.agency-site[data-theme="light"] .services-showcase-card .services-showcase-copy p {
+  color: #e8e2d7 !important;
+}
+.agency-site[data-theme="light"] .services-showcase-card .services-showcase-arrow {
+  color: #f4c77b !important;
+  border-color: #D0A45C !important;
+  background: transparent !important;
+}
+.agency-site[data-theme="light"] .services-showcase-card .services-showcase-arrow:hover {
+  background: #D0A45C !important;
+  color: #0F3D3A !important;
+}
+.agency-site[data-theme="light"] .services-showcase-card .services-showcase-number {
+  color: #f4c77b !important;
+}
+.agency-site[data-theme="light"] .philosophy-section,
+.agency-site[data-theme="light"] .client-stories,
+.agency-site[data-theme="light"] .footer{
+  background:#0F3D3A!important;
+  color:#F5DABF!important;
+}
+.agency-site[data-theme="light"] .footer .brand-wordmark,
+.agency-site[data-theme="light"] .footer>span{
+  color:#F5DABF!important;
+}
+
+/* Light theme: Work With Us (Contact) section background cream (#F5DABF) */
+.agency-site[data-theme="light"] .contact-brief {
+  background: #F5DABF !important;
+  background-image: none !important;
+  color: #0F3D3A !important;
+}
+.agency-site[data-theme="light"] .contact-brief__story {
+  background-color: #F5DABF !important;
+  background-image: linear-gradient(90deg,rgba(245,218,191,.76),rgba(245,218,191,.88) 58%,rgba(245,218,191,.76)),url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1600&q=85') !important;
+}
+.agency-site[data-theme="light"] .contact-brief__story::after {
+  background: linear-gradient(90deg,rgba(245,218,191,.12),rgba(245,218,191,.04) 58%,rgba(245,218,191,.15)) !important;
+}
+.agency-site[data-theme="light"] .contact-brief__form-panel {
+  background: #F5DABF !important;
+}
+.agency-site[data-theme="light"] .contact-brief .contact-brief__story h2,
+.agency-site[data-theme="light"] .contact-brief .contact-brief__form-wrap h3,
+.agency-site[data-theme="light"] .contact-brief .contact-brief__eyebrow,
+.agency-site[data-theme="light"] .contact-brief .contact-brief__intro,
+.agency-site[data-theme="light"] .contact-brief .contact-brief__detail,
+.agency-site[data-theme="light"] .contact-brief form label {
+  color: #0F3D3A !important;
+}
+.agency-site[data-theme="light"] .contact-brief form input,
+.agency-site[data-theme="light"] .contact-brief form select,
+.agency-site[data-theme="light"] .contact-brief form textarea {
+  background: rgba(255,255,255,.52) !important;
+  color: #0F3D3A !important;
+  border-color: rgba(15,61,58,.32) !important;
+}
+.agency-site[data-theme="light"] .contact-brief form input::placeholder,
+.agency-site[data-theme="light"] .contact-brief form textarea::placeholder,
+.agency-site[data-theme="light"] .contact-brief .contact-brief__subtext {
+  color: rgba(15,61,58,.72) !important;
+}
+.agency-site[data-theme="light"] .contact-brief form select option {
+  background: #F5DABF !important;
+  color: #0F3D3A !important;
+}
+.agency-site[data-theme="light"] .contact-brief__submit {
+  background: #0F3D3A !important;
+  color: #F5DABF !important;
+  border: 1px solid #D0A45C !important;
+}
+.agency-site[data-theme="light"] .contact-brief__socials a {
+  color: #0F3D3A !important;
+  border-color: #0F3D3A !important;
+}
+.agency-site[data-theme="light"] .contact-brief__detail {
+  border-bottom-color: rgba(15,61,58,.25) !important;
+}
+
+/* Our Services: burgundy accents in both themes; preserve card layout and content. */
+.agency-site .services-showcase .services-showcase-number {
+  color: #6C151E !important;
+  text-shadow: none !important;
+}
+.agency-site .services-showcase .services-showcase-arrow,
+.agency-site .services-showcase .services-showcase-card .services-showcase-arrow,
+.agency-site .services-showcase .services-showcase-arrow:hover,
+.agency-site .services-showcase .services-showcase-card .services-showcase-arrow:hover,
+.agency-site .services-showcase .services-showcase-arrow:focus-visible {
+  background: #6C151E !important;
+  color: #FFFFFF !important;
+  border-color: #6C151E !important;
+}
+
+/* Override the older light-theme gold-number rule with the requested burgundy. */
+.agency-site[data-theme="light"] .services-showcase .services-showcase-card .services-showcase-number,
+.agency-site[data-theme="dark"] .services-showcase .services-showcase-card .services-showcase-number {
+  color: #6C151E !important;
+  text-shadow: none !important;
+}
+
+/* Portfolio: match the approved burgundy-accent mockup without changing layout. */
+.agency-site .our-portfolio__eyebrow {
+  color: #6C151E !important;
+}
+.agency-site .our-portfolio__eyebrow > span {
+  background: #6C151E !important;
+}
+.agency-site .our-portfolio h2 .our-portfolio__title-first {
+  position: relative;
+  display: inline-block;
+  color: inherit;
+}
+.agency-site .our-portfolio h2 .our-portfolio__title-first::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.14em;
+  width: 0.9em;
+  height: 4px;
+  border-radius: 1px;
+  background: #6C151E;
+}
+.agency-site .our-portfolio__view-all,
+.agency-site .our-portfolio__view-all:hover,
+.agency-site .our-portfolio__view-all:focus-visible {
+  background: #6C151E !important;
+  color: #FFFFFF !important;
+  border-color: #6C151E !important;
+  box-shadow: 0 9px 20px rgba(108, 21, 30, .24) !important;
+}
+.agency-site .our-portfolio__arrow,
+.agency-site .our-portfolio__card:hover .our-portfolio__arrow,
+.agency-site .our-portfolio__card:focus-visible .our-portfolio__arrow {
+  background: #6C151E !important;
+  color: #FFFFFF !important;
+  border-color: #6C151E !important;
+}
+
+/* Contact section: warm editorial split layout; preserve existing typography. */
+.agency-site[data-theme="light"] .contact-brief {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) !important;
+  min-height: 620px !important;
+  background: #F5DABF !important;
+  color: #0F3D3A !important;
+}
+.agency-site[data-theme="light"] .contact-brief__story {
+  background-color: #F5DABF !important;
+  background-image: linear-gradient(90deg, rgba(245,218,191,.08), rgba(245,218,191,.02) 58%, rgba(245,218,191,.08)), url('/contact_bg.png') !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+.agency-site[data-theme="light"] .contact-brief__story::after {
+  background: none !important;
+}
+.agency-site[data-theme="light"] .contact-brief__story-content {
+  width: min(100%, 590px) !important;
+  padding: 64px clamp(30px, 5.3vw, 88px) !important;
+}
+.agency-site[data-theme="light"] .contact-brief__story h2 {
+  color: #0F3D3A !important;
+}
+.agency-site .contact-brief__headline-accent,
+.agency-site .contact-brief__form-heading-accent {
+  color: #6C151E !important;
+}
+.agency-site[data-theme="light"] .contact-brief__eyebrow {
+  color: #6C151E !important;
+}
+.agency-site .contact-brief .contact-brief__eyebrow {
+  color: #6C151E !important;
+}
+.agency-site .contact-brief .contact-brief__eyebrow > span {
+  background: #6C151E !important;
+  background-color: #6C151E !important;
+}
+.agency-site[data-theme="light"] .contact-brief__intro,
+.agency-site[data-theme="light"] .contact-brief__detail,
+.agency-site[data-theme="light"] .contact-brief form label,
+.agency-site[data-theme="light"] .contact-brief .contact-brief__form-wrap h3 {
+  color: #0F3D3A !important;
+}
+.agency-site[data-theme="light"] .contact-brief__detail {
+  border-bottom-color: rgba(15,61,58,.22) !important;
+}
+.agency-site[data-theme="light"] .contact-brief__detail {
+  transition: color .22s ease, border-color .22s ease, background-color .22s ease;
+  -webkit-tap-highlight-color: rgba(108,21,30,.16);
+}
+.agency-site[data-theme="light"] .contact-brief__detail:hover,
+.agency-site[data-theme="light"] .contact-brief__detail:focus,
+.agency-site[data-theme="light"] .contact-brief__detail:focus-visible,
+.agency-site[data-theme="light"] .contact-brief__detail:active {
+  color: #6C151E !important;
+  border-bottom-color: #6C151E !important;
+}
+.agency-site[data-theme="light"] .contact-brief__detail:hover svg,
+.agency-site[data-theme="light"] .contact-brief__detail:focus svg,
+.agency-site[data-theme="light"] .contact-brief__detail:active svg {
+  color: #6C151E !important;
+}
+.agency-site[data-theme="light"] .contact-brief__socials a {
+  color: #0F3D3A !important;
+  border-color: rgba(15,61,58,.6) !important;
+  transition: background .22s ease, border-color .22s ease, color .22s ease, transform .22s ease;
+  -webkit-tap-highlight-color: rgba(108,21,30,.16);
+}
+.agency-site[data-theme="light"] .contact-brief__socials a:hover,
+.agency-site[data-theme="light"] .contact-brief__socials a:focus,
+.agency-site[data-theme="light"] .contact-brief__socials a:focus-visible,
+.agency-site[data-theme="light"] .contact-brief__socials a:active {
+  background: #6C151E !important;
+  border-color: #6C151E !important;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+}
+.agency-site[data-theme="light"] .contact-brief__form-panel {
+  background: #F5DABF !important;
+  padding: 48px clamp(28px, 4.8vw, 78px) !important;
+}
+.agency-site[data-theme="light"] .contact-brief form input,
+.agency-site[data-theme="light"] .contact-brief form select,
+.agency-site[data-theme="light"] .contact-brief form textarea {
+  background: rgba(255,255,255,.48) !important;
+  color: #0F3D3A !important;
+  border-color: rgba(15,61,58,.25) !important;
+}
+.agency-site[data-theme="light"] .contact-brief form input::placeholder,
+.agency-site[data-theme="light"] .contact-brief form textarea::placeholder,
+.agency-site[data-theme="light"] .contact-brief .contact-brief__subtext {
+  color: rgba(15,61,58,.68) !important;
+}
+.agency-site[data-theme="light"] .contact-brief form select option {
+  background: #F5DABF !important;
+  color: #0F3D3A !important;
+}
+.agency-site[data-theme="light"] .contact-brief__select-wrap > svg {
+  color: #0F3D3A !important;
+}
+.agency-site[data-theme="light"] .contact-brief__submit,
+.agency-site[data-theme="light"] .contact-brief__submit:hover,
+.agency-site[data-theme="light"] .contact-brief__submit:focus-visible {
+  background: #6C151E !important;
+  color: #FFFFFF !important;
+  border: 1px solid #6C151E !important;
+}
+.agency-site[data-theme="light"] .contact-brief form {
+  gap: 14px !important;
+}
+.agency-site[data-theme="light"] .contact-brief form label {
+  font-size: 13px !important;
+}
+.agency-site[data-theme="light"] .contact-brief form input,
+.agency-site[data-theme="light"] .contact-brief form select {
+  height: 53px !important;
+  border-radius: 5px !important;
+  padding-left: 18px !important;
+}
+.agency-site[data-theme="light"] .contact-brief__submit {
+  min-height: 56px !important;
+  margin-top: 0 !important;
+  box-shadow: 0 10px 22px rgba(108,21,30,.22) !important;
+}
+@media (max-width: 640px) {
+  .agency-site[data-theme="light"] .contact-brief {
+    grid-template-columns: 1fr !important;
+  }
+  .agency-site[data-theme="light"] .contact-brief__story-content {
+    padding: 48px 26px !important;
+  }
+}
+.agency-site .client-stories .client-stories__copy h2 em,
+.agency-site .client-stories .client-stories__quote-icon,
+.agency-site .client-stories .client-stories__note em {
+  color: #6C151E !important;
+}
+.agency-site .client-stories .client-stories__primary,
+.agency-site .client-stories .client-stories__primary:hover,
+.agency-site .client-stories .client-stories__primary:focus-visible {
+  background: #6C151E !important;
+  color: #FFFFFF !important;
+  border-color: #6C151E !important;
+  box-shadow: 0 9px 24px rgba(108, 21, 30, .28) !important;
+}
+.agency-site .client-stories .client-stories__primary:hover,
+.agency-site .client-stories .client-stories__primary:focus-visible {
+  background: #841B26 !important;
+  border-color: #841B26 !important;
+}

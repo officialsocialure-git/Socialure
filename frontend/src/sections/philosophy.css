@@ -1,0 +1,211 @@
+/* Philosophy / Enduring Value section — isolated styles */
+.philosophy-section{
+  --ph-ink:#292521;--ph-gold:#a66b2c;--ph-gold-deep:#8d511b;
+  position:relative;isolation:isolate;min-height:780px;height:min(100vh,940px);overflow:hidden;
+  color:var(--ph-ink);background:
+    radial-gradient(ellipse at 44% 18%,rgba(255,250,235,.96) 0,rgba(250,234,211,.78) 36%,transparent 69%),
+    radial-gradient(ellipse at 74% 67%,rgba(255,239,212,.62),transparent 43%),
+    linear-gradient(180deg,#f3e4d0 0%,#f6e5cd 63%,#d9c3a4 100%);
+  scroll-margin-top:0;
+}
+.philosophy-section:before{content:"";position:absolute;z-index:-2;left:-4%;right:-4%;bottom:-2%;height:24%;background:
+ linear-gradient(177deg,transparent 0 13%,#f8ebd6c9 17%,#9c79575c 23%,#fff1d7e8 31%,#8d6c4d55 37%,#fff2d9ed 46%,#99755055 56%,#fff3dce8 65%,#a5866457 74%,#e9d4b7 100%);filter:blur(1px);transform:perspective(900px) rotateX(7deg);transform-origin:bottom}
+.philosophy-atmosphere{position:absolute;z-index:-1;inset:0;pointer-events:none;background:radial-gradient(ellipse at 48% 42%,#fff8e7a6,transparent 56%)}
+.philosophy-intro{position:absolute;z-index:5;left:7.8%;top:5.5%;width:min(38%,590px)}
+.philosophy-eyebrow{display:flex;align-items:center;gap:16px;font-size:12px;letter-spacing:.19em;font-weight:500;white-space:nowrap}
+.philosophy-eyebrow i{display:block;width:85px;height:1px;background:#b97d3e}
+.philosophy-intro h2{font-family:"Playfair Display",Georgia,serif;font-weight:600;font-size:clamp(40px,4.15vw,62px);letter-spacing:-1.8px;line-height:1.04;margin:17px 0 22px;color:#292521}
+.philosophy-intro h2 em{display:block;color:#6C151E;font-weight:600}
+.philosophy-intro>p{max-width:495px;font-size:clamp(14px,.98vw,16px);line-height:1.62;margin:0 0 18px;color:#37322d}
+.philosophy-actions{display:flex;align-items:center;gap:30px}
+.philosophy-cta{height:42px;display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:0 27px;border-radius:99px;background:linear-gradient(100deg,#9e642b,#c59452);color:#fff;text-decoration:none;text-transform:uppercase;font-size:11px;font-weight:600;letter-spacing:.035em;box-shadow:0 2px 0 #ffffff80 inset;transition:transform .25s,box-shadow .25s}
+.philosophy-cta:hover{transform:translateY(-3px);box-shadow:0 10px 25px #9d6c3535}
+.philosophy-story{display:flex;align-items:center;gap:13px;border:0;background:none;color:#302a24;cursor:pointer;text-align:left;font-family:inherit;font-size:10px;font-weight:600;letter-spacing:.12em;line-height:1.6}
+.philosophy-story>span{width:43px;height:43px;display:grid;place-items:center;padding-left:2px;border:1px solid #9e642b;border-radius:50%;background:#fff4e5a8}
+.philosophy-story b{font-weight:600}
+.philosophy-edit-tools{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:20px;color:#795b3b;font-size:10px;letter-spacing:.015em}
+.philosophy-edit-tools>span{display:inline-flex;align-items:center;gap:5px}
+.philosophy-edit-tools button{display:inline-flex;align-items:center;gap:5px;border:1px solid #b78a59;border-radius:30px;background:#fff8e9a6;color:#7c501f;padding:5px 9px;font:inherit;cursor:pointer}
+.philosophy-edit-tools button:hover{background:#fff}
+.philosophy-edit-tools .philosophy-saved{color:#39704b}
+.philosophy-handwriting{position:absolute;z-index:3;left:47.5%;top:8.5%;width:205px;color:#8e541b;font-family:"Playfair Display",Georgia,serif;font-size:clamp(26px,2.45vw,40px);font-style:italic;line-height:.83;transform:rotate(-13deg);display:flex;flex-direction:column;align-items:center;pointer-events:none}
+.philosophy-handwriting span:nth-child(2){margin-left:22px}.philosophy-handwriting span:nth-child(3){margin-left:47px}
+.philosophy-handwriting svg{position:absolute;width:245px;height:100px;left:-22px;top:26px;overflow:visible}
+.philosophy-handwriting path{fill:none;stroke:#a56b2c;stroke-width:1.5}
+.philosophy-side-nav{position:absolute;z-index:5;right:7.5%;top:5.4%;display:grid;gap:12px;font-size:11px;letter-spacing:.18em;text-transform:uppercase}
+.philosophy-side-nav a{color:#342d25;text-decoration:none}.philosophy-side-nav a:hover{color:#a76a2a}
+.philosophy-side-nav i{width:30px;height:2px;background:#9e642b;margin-top:8px}
+.philosophy-scroll{position:absolute;z-index:5;right:2.2%;top:28.5%;display:flex;flex-direction:column;align-items:center;gap:8px;color:#2e2923;text-decoration:none;font-size:10px;letter-spacing:.2em}
+.philosophy-scroll>span{height:41px;width:15px;border:1.5px solid #985e25;border-radius:10px;position:relative}
+.philosophy-scroll>span i{position:absolute;top:6px;left:5px;width:2px;height:8px;border-radius:2px;background:#985e25;animation:philosophy-wheel 1.5s infinite}
+@keyframes philosophy-wheel{0%,100%{transform:translateY(0);opacity:1}70%{transform:translateY(9px);opacity:.15}}
+.philosophy-cards{position:absolute;z-index:4;left:4%;right:4%;top:38.5%;height:49%;min-height:340px}
+.philosophy-lines{position:absolute;z-index:-1;left:-4%;top:-7%;width:108%;height:119%;overflow:visible;pointer-events:none}
+.philosophy-lines path{fill:none;stroke:url(#philosophyGoldLine);stroke-width:1.55;filter:url(#philosophyLineGlow)}
+.philosophy-lines .philosophy-lines__halo{stroke:#fff1d0;stroke-width:4;opacity:.8;filter:blur(3px)}
+.philosophy-lines .philosophy-lines__lower{stroke:#bd7d32;stroke-width:1.25;filter:none}
+.philosophy-card-slot{position:absolute;width:16.2%;height:auto}
+.philosophy-card-slot--purpose{left:0;top:18%}
+.philosophy-card-slot--innovation{left:17.4%;top:31%}
+.philosophy-card-slot--quality{left:34%;top:0}
+.philosophy-card-slot--trust{left:50%;top:23%}
+.philosophy-card-slot--impact{left:65.6%;top:2%}
+.philosophy-card-slot--scale{right:0;top:30%}
+.philosophy-card{position:relative;width:100%;padding:19px 18px 13px;border:1px solid rgba(255,255,255,.96);border-radius:19px;background:linear-gradient(140deg,rgba(255,255,255,.8),rgba(255,246,228,.68) 56%,rgba(255,255,255,.82));box-shadow:0 10px 22px rgba(102,68,33,.13),0 0 0 1px #ffffff59 inset,0 0 15px #fff4d5cc;backdrop-filter:blur(7px);transform:rotate(var(--rotation,0deg));transition:transform .3s,box-shadow .3s}
+.philosophy-card-slot--purpose .philosophy-card{--rotation:-1deg}.philosophy-card-slot--innovation .philosophy-card{--rotation:-1.2deg}.philosophy-card-slot--quality .philosophy-card{--rotation:-.8deg}.philosophy-card-slot--trust .philosophy-card{--rotation:-1deg}.philosophy-card-slot--impact .philosophy-card{--rotation:.7deg}.philosophy-card-slot--scale .philosophy-card{--rotation:-.5deg}
+.philosophy-card:hover{transform:translateY(-7px) rotate(0);box-shadow:0 20px 36px #80552d30,0 0 24px #fff2d4}
+.philosophy-card__open{display:block;width:100%;padding:0;border:0;background:transparent;color:inherit;text-align:left;cursor:pointer;font:inherit}
+.philosophy-card__heading{display:flex;align-items:center;gap:5px;margin:2px 0 12px;color:var(--ph-gold-deep);white-space:nowrap}
+.philosophy-card__number{font-family:"Playfair Display",Georgia,serif;font-size:clamp(25px,2vw,34px);line-height:1;font-weight:600;letter-spacing:-.05em;color:#6C151E}
+.philosophy-card__slash{font-family:"Playfair Display",Georgia,serif;font-size:17px;color:#b17a3c}
+.philosophy-card__title{font-size:clamp(10px,.95vw,14px);text-transform:uppercase;font-weight:500;letter-spacing:-.03em}
+.philosophy-card__icon{margin-left:auto;flex:0 0 38px;width:38px;height:38px;border:1px solid #b78041;border-radius:50%;display:grid;place-items:center;color:#8f571e}
+.philosophy-card__description{display:block;font-size:clamp(11px,.92vw,14px);line-height:1.42;color:#3b3732;margin:0 0 12px;min-height:56px}
+.philosophy-card__image-wrap{display:block;position:relative;height:clamp(70px,6.7vw,112px);border-radius:9px;overflow:hidden;background:linear-gradient(135deg,#d7b98d,#f7e7ca 50%,#b98954);box-shadow:0 2px 5px #7e58302a}
+.philosophy-card__image{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.82) sepia(.08);transition:transform .5s,opacity .2s}
+.philosophy-card:hover .philosophy-card__image{transform:scale(1.06)}
+.philosophy-card__image-caption{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:space-between;padding:8px 10px;background:linear-gradient(transparent,#27190bd9);color:#fff;font-size:10px;opacity:0;transform:translateY(5px);transition:opacity .2s,transform .2s}
+.philosophy-card:hover .philosophy-card__image-caption,.philosophy-card__open:focus-visible .philosophy-card__image-caption{opacity:1;transform:translateY(0)}
+.philosophy-card__edit{position:absolute;z-index:3;top:8px;right:8px;width:28px;height:28px;display:grid;place-items:center;border:1px solid #b78041;border-radius:50%;background:#fff9eb;color:#87521d;cursor:pointer;opacity:0;transform:translateY(-3px);transition:opacity .2s,transform .2s}
+.philosophy-card:hover .philosophy-card__edit,.philosophy-card__edit:focus-visible{opacity:1;transform:translateY(0)}
+.philosophy-card__edit:hover{background:#a66b2c;color:white}
+.philosophy-dialog-backdrop{position:fixed;z-index:10000;inset:0;display:grid;place-items:center;padding:22px;background:rgba(16,24,19,.65);backdrop-filter:blur(8px)}
+.philosophy-dialog,.philosophy-editor{position:relative;width:min(760px,100%);max-height:min(88vh,850px);overflow:auto;border:1px solid #fff1d4;border-radius:22px;background:#f8ecd9;box-shadow:0 28px 90px #0005}
+.philosophy-dialog__close{position:absolute;z-index:5;top:14px;right:14px;width:38px;height:38px;display:grid;place-items:center;border:1px solid #c69a63;border-radius:50%;background:#fff9ed;color:#62431f;cursor:pointer}
+.philosophy-dialog--detail{display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
+.philosophy-dialog__image{min-height:350px;background:#d4b489}
+.philosophy-dialog__image img{display:block;width:100%;height:100%;object-fit:cover}
+.philosophy-dialog__body{align-self:center;padding:42px}
+.philosophy-dialog__eyebrow{display:flex;align-items:center;gap:8px;color:#8e5b25;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.philosophy-dialog__body h3{font-family:"Playfair Display",Georgia,serif;font-size:42px;line-height:1;margin:17px 0;color:#292521}
+.philosophy-dialog__body p{font-size:15px;line-height:1.7;color:#4b4238}
+.philosophy-dialog__done,.philosophy-editor__save{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:40px;background:#a76c2d;color:white;padding:12px 17px;font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;cursor:pointer}
+.philosophy-editor{width:min(620px,100%);padding:26px}
+.philosophy-editor__top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:20px}
+.philosophy-editor__top .philosophy-dialog__close{position:static;flex:0 0 38px}
+.philosophy-editor__eyebrow{display:flex;align-items:center;gap:7px;color:#93602c;font-size:10px;font-weight:600;letter-spacing:.14em}
+.philosophy-editor__top h3{font-family:"Playfair Display",Georgia,serif;font-size:31px;font-weight:600;margin:7px 0 0}
+.philosophy-editor__preview{display:flex;align-items:center;gap:14px;margin-bottom:17px;padding:10px;border:1px solid #e0c9a8;border-radius:13px;background:#fff8ec}
+.philosophy-editor__preview img{width:96px;height:70px;object-fit:cover;border-radius:8px;background:#e6d0ad}
+.philosophy-editor__preview div{display:grid;gap:4px;font-size:12px}.philosophy-editor__preview span{color:#806d57;font-size:11px;line-height:1.45}
+.philosophy-editor form>label:not(.philosophy-editor__upload){display:grid;gap:7px;margin:13px 0;color:#624a30;font-size:12px;font-weight:600}
+.philosophy-editor input:not([type=file]),.philosophy-editor textarea{width:100%;border:1px solid #d6bd9a;border-radius:10px;background:#fffaf1;color:#292521;padding:11px 12px;font:400 13px/1.5 "DM Sans",sans-serif;outline:none}
+.philosophy-editor input:focus,.philosophy-editor textarea:focus{border-color:#a66b2c;box-shadow:0 0 0 3px #a66b2c20}
+.philosophy-editor textarea{resize:vertical}
+.philosophy-editor__upload{position:relative;display:flex;align-items:center;justify-content:center;gap:8px;margin:14px 0;padding:13px;border:1px dashed #b58a56;border-radius:11px;background:#fff7e9;color:#83531f;font-size:12px;font-weight:600;cursor:pointer}
+.philosophy-editor__upload input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+.philosophy-editor__error{color:#a33c2b;font-size:12px}
+.philosophy-editor__actions{display:flex;justify-content:flex-end;gap:10px;padding-top:12px}
+.philosophy-editor__cancel{border:1px solid #c9ab83;border-radius:30px;background:transparent;color:#664c30;padding:11px 17px;font-size:12px;cursor:pointer}
+.philosophy-editor__save{padding:11px 18px}
+@media(min-width:1500px){.philosophy-card{padding:21px 20px 14px}.philosophy-card__image-wrap{height:clamp(90px,7vw,116px)}}
+@media(max-width:1150px) and (min-width:701px){
+ .philosophy-section{height:auto;min-height:1120px}
+ .philosophy-intro{left:5%;width:53%}.philosophy-handwriting{left:53%;top:12%;font-size:32px}.philosophy-side-nav{right:5%}
+ .philosophy-cards{top:41%;left:4%;right:4%;height:50%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px 3%}
+ .philosophy-card-slot,.philosophy-card-slot--purpose,.philosophy-card-slot--innovation,.philosophy-card-slot--quality,.philosophy-card-slot--trust,.philosophy-card-slot--impact,.philosophy-card-slot--scale{position:relative;left:auto;right:auto;top:auto;width:100%;align-self:start}
+ .philosophy-card-slot--innovation,.philosophy-card-slot--impact{margin-top:24px}
+ .philosophy-card{min-height:250px}.philosophy-card__description{font-size:13px;min-height:55px}.philosophy-card__image-wrap{height:85px}
+ .philosophy-lines{height:100%;top:0}
+}
+@media(max-width:700px){
+ .philosophy-section{height:auto;min-height:1740px;overflow:hidden}
+ .philosophy-intro{left:22px;right:22px;top:30px;width:auto}
+ .philosophy-eyebrow{font-size:10px;gap:11px}.philosophy-eyebrow i{width:48px}
+ .philosophy-intro h2{font-size:clamp(40px,10vw,52px);line-height:1.02;margin:15px 0 17px}
+ .philosophy-intro>p{font-size:14px;max-width:460px}
+ .philosophy-actions{gap:15px;flex-wrap:wrap}.philosophy-cta{height:40px;padding:0 17px;font-size:10px}.philosophy-story{font-size:9px;gap:9px}.philosophy-story>span{width:38px;height:38px}
+ .philosophy-edit-tools{margin-top:13px;gap:8px;font-size:9px}
+ .philosophy-handwriting{left:auto;right:20px;top:325px;width:150px;font-size:27px}.philosophy-handwriting svg{width:165px;left:-10px;top:18px}
+ .philosophy-side-nav{top:24px;right:20px;gap:8px;font-size:8px;letter-spacing:.1em}.philosophy-side-nav a:nth-child(n+3){display:none}.philosophy-side-nav i{width:20px}
+ .philosophy-scroll{top:375px;right:24px;font-size:8px}
+ .philosophy-cards{top:470px;left:22px;right:22px;height:auto;min-height:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;align-content:start}
+ .philosophy-lines{display:none}
+ .philosophy-card-slot,.philosophy-card-slot--purpose,.philosophy-card-slot--innovation,.philosophy-card-slot--quality,.philosophy-card-slot--trust,.philosophy-card-slot--impact,.philosophy-card-slot--scale{position:relative;left:auto;right:auto;top:auto;width:100%;align-self:start}
+ .philosophy-card-slot:nth-of-type(2n){margin-top:23px}
+ .philosophy-card,.philosophy-card-slot .philosophy-card{padding:15px 12px 12px;border-radius:15px;transform:none;min-height:0}
+ .philosophy-card:hover{transform:translateY(-4px)}
+ .philosophy-card__heading{gap:4px;margin-bottom:10px;flex-wrap:wrap}
+ .philosophy-card__number{font-size:25px}.philosophy-card__slash{font-size:13px}.philosophy-card__title{font-size:11px}
+ .philosophy-card__icon{width:29px;height:29px;flex-basis:29px}.philosophy-card__icon svg{width:16px;height:16px}
+ .philosophy-card__description{font-size:12px;min-height:78px;line-height:1.45}
+ .philosophy-card__image-wrap{height:82px}
+ .philosophy-card__edit{opacity:1;transform:none;top:5px;right:5px;width:24px;height:24px}
+ .philosophy-bottom-copy{left:22px;bottom:25px;font-size:9px}
+ .philosophy-seal{right:18px;bottom:18px;width:82px;height:82px}.philosophy-seal b{font-size:42px}.philosophy-seal small,.philosophy-seal span{font-size:5px}
+ .philosophy-dialog--detail{grid-template-columns:1fr;max-width:480px}
+ .philosophy-dialog__image{height:220px;min-height:0}.philosophy-dialog__body{padding:25px}.philosophy-dialog__body h3{font-size:34px}
+ .philosophy-editor{padding:20px;max-height:90vh}.philosophy-editor__top h3{font-size:26px}
+}
+@media(max-width:390px){
+ .philosophy-section{min-height:1680px}.philosophy-intro{left:18px;right:18px}.philosophy-intro h2{font-size:41px}
+ .philosophy-cards{left:18px;right:18px;gap:12px}
+ .philosophy-card,.philosophy-card-slot .philosophy-card{padding:13px 10px 10px}
+ .philosophy-card__number{font-size:22px}.philosophy-card__title{font-size:10px}.philosophy-card__icon{display:none}
+ .philosophy-card__description{font-size:11px;min-height:88px}.philosophy-card__image-wrap{height:70px}
+ .philosophy-edit-tools>span:first-child{max-width:230px}
+}
+/* Hanging carousel: isolated to this section; the rest of the site is unchanged. */
+.philosophy-cards--carousel{
+  top:44% !important;
+  height:46% !important;
+  min-height:390px;
+}
+.philosophy-section{
+  height:1000px !important;
+  min-height:1000px !important;
+  overflow:hidden;
+}
+.philosophy-cards--carousel .philosophy-card-slot--carousel{
+  transition:left 1.05s cubic-bezier(.22,1,.36,1),top 1.05s cubic-bezier(.22,1,.36,1),transform 1.05s cubic-bezier(.22,1,.36,1),opacity .75s ease;
+  transform-origin:top center;
+}
+.philosophy-hanging-anchor{
+  position:absolute;left:50%;top:-34px;width:1.5px;height:34px;
+  transform:translateX(-50%);background:linear-gradient(to bottom,#f4c46a,rgba(244,196,106,.35));
+  pointer-events:none;
+}
+.philosophy-hanging-anchor:before{
+  content:"";position:absolute;left:50%;top:-5px;width:11px;height:11px;border-radius:50%;
+  transform:translateX(-50%);background:#f4c46a;box-shadow:0 0 12px #f4c46a,0 0 4px #fff;
+}
+.philosophy-hanging-anchor i{
+  position:absolute;left:50%;bottom:0;width:5px;height:5px;border-radius:50%;
+  transform:translate(-50%,50%);background:#e5b15d;
+}
+.philosophy-cards--carousel .philosophy-card-slot--carousel .philosophy-card{
+  transform-origin:top center;
+  animation:philosophy-pendulum 4.4s ease-in-out infinite alternate;
+  will-change:transform;
+}
+.philosophy-cards--carousel .philosophy-card-slot--carousel:nth-of-type(2n) .philosophy-card{animation-duration:5.1s;animation-delay:-1.7s}
+.philosophy-cards--carousel .philosophy-card-slot--carousel:nth-of-type(3n) .philosophy-card{animation-duration:3.9s;animation-delay:-.8s}
+.philosophy-cards--carousel .philosophy-card-slot--carousel:nth-of-type(4n) .philosophy-card{animation-duration:4.7s;animation-delay:-2.1s}
+@keyframes philosophy-pendulum{0%{rotate:-1.8deg}100%{rotate:1.8deg}}
+.philosophy-cards--carousel .philosophy-card-slot--carousel:hover .philosophy-card{animation-play-state:paused}
+.philosophy-carousel-controls{
+  position:absolute;right:0;bottom:-42px;z-index:50;display:flex;align-items:center;gap:12px;color:#e8c58d;
+  font-size:10px;letter-spacing:.15em;
+  padding:8px 10px;border:1px solid rgba(192,139,72,.28);border-radius:28px;
+  background:rgba(8,37,29,.92);box-shadow:0 8px 20px rgba(0,0,0,.18);
+}
+.philosophy-carousel-controls>span{display:flex;align-items:center;gap:8px}
+.philosophy-carousel-controls>span i{display:block;width:28px;height:1px;background:#b9823d}
+.philosophy-carousel-controls button{
+  display:grid;place-items:center;width:34px;height:34px;border:1px solid #c08b48;border-radius:50%;
+  background:rgba(8,37,29,.8);color:#f8efdf;font-size:17px;cursor:pointer;transition:background .25s,color .25s,transform .25s;
+}
+.philosophy-carousel-controls button:hover{background:#d6a15b;color:#10271f;transform:scale(1.06)}
+@media(max-width:1150px) and (min-width:701px){
+  .philosophy-cards--carousel .philosophy-card-slot--carousel{transition:none}
+  .philosophy-hanging-anchor{display:none}
+  .philosophy-cards--carousel .philosophy-card-slot--carousel .philosophy-card{animation:none}
+  .philosophy-carousel-controls{bottom:-6%}
+}
+@media(max-width:700px){
+  .philosophy-section{height:auto!important;min-height:1680px!important}
+  .philosophy-cards--carousel .philosophy-card-slot--carousel{pointer-events:auto!important}
+  .philosophy-hanging-anchor,.philosophy-carousel-controls{display:none}
+  .philosophy-cards--carousel .philosophy-card-slot--carousel .philosophy-card{animation:none}
+}
+@media(prefers-reduced-motion:reduce){.philosophy-section *, .philosophy-section *:before,.philosophy-section *:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}

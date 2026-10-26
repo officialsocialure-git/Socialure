@@ -1,0 +1,125 @@
+/* Mobile: keep two cards moving along a gold wave, like the desktop carousel. */
+@media (max-width: 700px) {
+  /* Hide the WATCH OUR STORY control on mobile only. */
+  .philosophy-section .philosophy-story {
+    display: none !important;
+  }
+
+  .philosophy-section {
+    height: auto !important;
+    min-height: 850px !important;
+  }
+
+  /* Hide the decorative Ideas / Design / Impact lettering on mobile only. */
+  .philosophy-section .philosophy-handwriting {
+    display: none !important;
+  }
+
+  .philosophy-cards--carousel {
+    display: block !important;
+    position: absolute !important;
+    top: 270px !important;
+    left: 18px !important;
+    right: 18px !important;
+    width: auto !important;
+    height: 400px !important;
+    min-height: 400px !important;
+    overflow: visible !important;
+  }
+
+  /* Use the actual SVG gold wave as the card suspension track (no duplicate CSS curve). */
+  .philosophy-cards--carousel::before {
+    content: none !important;
+    display: none !important;
+  }
+
+  .philosophy-cards--carousel .philosophy-card-slot--carousel[aria-hidden="true"],
+  .philosophy-cards--carousel .philosophy-card-slot--carousel[aria-hidden="false"] {
+    display: block !important;
+    position: absolute !important;
+    width: 46% !important;
+    right: auto !important;
+    bottom: auto !important;
+    transition: left 1.15s cubic-bezier(.22,1,.36,1),
+                top 1.15s cubic-bezier(.22,1,.36,1),
+                opacity .55s ease,
+                transform .75s cubic-bezier(.22,1,.36,1) !important;
+    will-change: left, top, opacity, transform;
+  }
+
+  .philosophy-cards--carousel .philosophy-card-slot--carousel .philosophy-card {
+    width: 100% !important;
+    min-height: 245px !important;
+    height: auto !important;
+    padding: 14px 11px 11px !important;
+    border-radius: 15px !important;
+    animation: philosophy-mobile-swing 4.4s ease-in-out infinite alternate !important;
+  }
+
+  .philosophy-cards--carousel .philosophy-card-slot--carousel[data-carousel-slot="1"] .philosophy-card {
+    animation-delay: -1.5s !important;
+  }
+
+  .philosophy-cards--carousel .philosophy-card__heading { gap: 4px; margin-bottom: 10px; }
+  .philosophy-cards--carousel .philosophy-card__number { font-size: 24px; }
+  .philosophy-cards--carousel .philosophy-card__title { font-size: 10px; }
+  .philosophy-cards--carousel .philosophy-card__icon { width: 27px; height: 27px; flex-basis: 27px; }
+  .philosophy-cards--carousel .philosophy-card__description { min-height: 76px; font-size: 11px; line-height: 1.45; }
+  .philosophy-cards--carousel .philosophy-card__image-wrap { height: 78px; }
+
+  .philosophy-cards--carousel .philosophy-lines {
+    display: block !important;
+    position: absolute !important;
+    left: -4% !important;
+    top: 0 !important;
+    width: 108% !important;
+    height: 310px !important;
+    opacity: .92 !important;
+    overflow: visible !important;
+    pointer-events: none !important;
+    z-index: 0 !important;
+  }
+  .philosophy-cards--carousel .philosophy-lines path:not(.philosophy-lines__halo):not(.philosophy-lines__lower) {
+    stroke: url(#philosophyGoldLine) !important;
+    stroke-width: 2 !important;
+    opacity: 1 !important;
+    filter: drop-shadow(0 0 3px rgba(244,196,106,.55));
+  }
+  .philosophy-cards--carousel .philosophy-lines .philosophy-lines__halo {
+    opacity: .22 !important;
+    stroke-width: 5 !important;
+  }
+  .philosophy-cards--carousel .philosophy-lines .philosophy-lines__lower {
+    opacity: .08 !important;
+  }
+  .philosophy-cards--carousel .philosophy-hanging-anchor {
+    display: block !important;
+    position: absolute !important;
+    z-index: 5 !important;
+    /* Align the glowing dot with the exact SVG wave sample; thread ends at the card top. */
+    top: calc(-1 * var(--anchor-thread, 40px)) !important;
+    height: var(--anchor-thread, 40px) !important;
+    width: 1.5px !important;
+    background: linear-gradient(to bottom, #f4c46a, rgba(244,196,106,.8)) !important;
+  }
+  .philosophy-cards--carousel .philosophy-hanging-anchor::before {
+    top: -5px !important;
+    width: 10px !important;
+    height: 10px !important;
+  }
+  .philosophy-cards--carousel .philosophy-carousel-controls { display: none !important; }
+}
+
+@media (max-width: 390px) {
+  .philosophy-section { min-height: 850px !important; }
+  .philosophy-cards--carousel { top: 270px !important; left: 16px !important; right: 16px !important; }
+  .philosophy-cards--carousel .philosophy-card-slot--carousel .philosophy-card {
+    min-height: 250px !important;
+    padding: 12px 9px 10px !important;
+  }
+}
+
+@keyframes philosophy-mobile-swing {
+  from { rotate: -1.2deg; }
+  to { rotate: 1.2deg; }
+}
