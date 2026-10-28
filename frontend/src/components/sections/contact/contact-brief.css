@@ -172,8 +172,34 @@
   .contact-brief__story h2 { font-size: clamp(38px, 5vw, 52px); }
   .contact-brief__intro { font-size: 13px; }
 }
+/* Fixed toast feedback: does not shift the form layout. */
+.contact-brief__toast {
+  position: fixed;
+  z-index: 10000;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: max-content;
+  max-width: min(420px, calc(100vw - 32px));
+  padding: 15px 17px;
+  border: 1px solid;
+  border-radius: 12px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, .18);
+  font: 500 14px/1.5 'DM Sans', sans-serif;
+  animation: contact-brief-toast-in .22s ease-out both;
+}
+.contact-brief__toast svg { width: 20px; height: 20px; flex: 0 0 20px; margin-top: 1px; }
+.contact-brief__toast.is-success { color: #17663a; background: #edf8ef; border-color: #c4e6cc; }
+.contact-brief__toast.is-error { color: #8c2727; background: #fff1ef; border-color: #f0c9c4; }
+@keyframes contact-brief-toast-in {
+  from { opacity: 0; transform: translate3d(0, -8px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
 @media (max-width: 640px) {
   .contact-brief { grid-template-columns: 1fr; }
+  .contact-brief__toast { top: max(12px, env(safe-area-inset-top)); right: 16px; left: 16px; width: auto; max-width: none; padding: 13px 14px; font-size: 13px; }
   .contact-brief__story { min-height: 510px; background-position: center; }
   .contact-brief__story-content { width: 100%; padding: 48px 26px; }
   .contact-brief__story h2 { font-size: clamp(43px, 12vw, 58px); }

@@ -1,13 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ArrowRight, Facebook, Linkedin, Mail, ChevronDown, Phone, Instagram, CheckCircle2, AlertCircle, LoaderCircle } from "lucide-react";
 import "./contact-brief.css";
 
 const EMAILJS_ENDPOINT = "https://api.emailjs.com/api/v1.0/email/send";
-const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID?.trim();
+const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID?.trim();
+const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY?.trim();
 const services = [
   "Campaign production",
   "Product photography",
@@ -23,6 +23,14 @@ export default function ContactBrief() {
   const [form, setForm] = useState({ name: "", brand: "", phone: "", email: "", service: "", budget: "", details: "" });
   const [submission, setSubmission] = useState({ state: "idle", message: "" });
   const update = (event) => setForm((current) => ({ ...current, [event.target.name]: event.target.value }));
+
+  useEffect(() => {
+    if (submission.state !== "success" && submission.state !== "error") return;
+    const timeoutId = window.setTimeout(() => {
+      setSubmission({ state: "idle", message: "" });
+    }, 3500);
+    return () => window.clearTimeout(timeoutId);
+  }, [submission.state, submission.message]);
 
   const submit = async (event) => {
     event.preventDefault();
@@ -44,12 +52,17 @@ export default function ContactBrief() {
             name: form.name.trim(),
             from_name: form.name.trim(),
             email: form.email.trim(),
+            from_email: form.email.trim(),
             reply_to: form.email.trim(),
             brand: form.brand.trim(),
+            brand_name: form.brand.trim(),
             company: form.brand.trim(),
             phone: form.phone.trim(),
+            contact_number: form.phone.trim(),
             service: form.service,
+            service_required: form.service,
             budget: form.budget,
+            budget_range: form.budget,
             message: form.details.trim() || "No additional project details provided.",
             source: "Website Contact Form",
             submitted_at: new Date().toLocaleString("en-IN"),
@@ -57,6 +70,8 @@ export default function ContactBrief() {
         })
       });
       if (!response.ok) {
+        const errorText = await response.text();
+        console.error("EmailJS submission error:", response.status, errorText);
         throw new Error("We couldn’t send your enquiry. Please try again.");
       }
       setSubmission({ state: "success", message: "Thanks! Your enquiry has been sent. Our team will get back to you soon." });
@@ -68,6 +83,16 @@ export default function ContactBrief() {
 
   return (
     <section className="contact-brief" id="contact">
+      {(submission.state === "success" || submission.state === "error") && (
+        <div
+          className={`contact-brief__toast ${submission.state === "success" ? "is-success" : "is-error"}`}
+          role={submission.state === "success" ? "status" : "alert"}
+          aria-live={submission.state === "success" ? "polite" : "assertive"}
+        >
+          {submission.state === "success" ? <CheckCircle2 aria-hidden="true" /> : <AlertCircle aria-hidden="true" />}
+          <span>{submission.message}</span>
+        </div>
+      )}
       <div className="contact-brief__story">
         <div className="contact-brief__story-content">
           <div className="contact-brief__eyebrow"><span /> WORK WITH US</div>
@@ -98,8 +123,8 @@ export default function ContactBrief() {
           <h3>Start a <span className="contact-brief__form-heading-accent">brief.</span></h3>
           <p className="contact-brief__subtext">Fill this in and we’ll get back to you within 24 hours. No generic auto-replies.</p>
 
-          {submission.state === "success" && <div className="contact-brief__form-feedback is-success" role="status"><CheckCircle2 aria-hidden="true"/><span>{submission.message}</span></div>}
-          {submission.state === "error" && <div className="contact-brief__form-feedback is-error" role="alert"><AlertCircle aria-hidden="true"/><span>{submission.message}</span></div>}
+
+
 
           <form onSubmit={submit}>
             <label>Your name <span className="contact-brief__required">*</span>
