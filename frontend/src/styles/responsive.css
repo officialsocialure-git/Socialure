@@ -122,7 +122,7 @@
   .agency-site .our-portfolio__view-all { margin-top: 0 !important; min-height: 44px !important; }
   .agency-site .our-portfolio__grid {
     grid-template-columns: minmax(0, 1fr) !important;
-    grid-template-areas: "feature" "product" "commerce" !important;
+    grid-template-areas: none !important;
     grid-template-rows: none !important;
     grid-auto-rows: 440px !important;
     gap: 14px !important;
@@ -144,11 +144,32 @@
   .agency-site .our-portfolio__card-content {
     left: 16px !important;
     right: 16px !important;
-    bottom: 22px !important;
+    bottom: 20px !important;
     z-index: 3 !important;
+    display: flex !important;
     align-items: flex-end !important;
+    gap: 10px !important;
   }
-  .agency-site .our-portfolio__card h3 { font-size: 23px !important; line-height: 1.15 !important; margin-bottom: 10px !important; }
+  .agency-site .our-portfolio__card-content > div {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+  }
+  .agency-site .our-portfolio__card h3 {
+    font-size: 23px !important;
+    line-height: 1.18 !important;
+    margin-bottom: 10px !important;
+    overflow-wrap: anywhere !important;
+  }
+  .agency-site .our-portfolio__card ul {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 6px 9px !important;
+  }
+  .agency-site .our-portfolio__arrow {
+    flex: 0 0 38px !important;
+    width: 38px !important;
+    height: 38px !important;
+  }
   .agency-site .client-stories__copy { padding: 48px 20px 16px !important; }
   .agency-site .client-stories__copy h2 { font-size: clamp(42px, 11vw, 58px) !important; }
   .agency-site .client-stories__copy > p { font-size: 14px !important; }
