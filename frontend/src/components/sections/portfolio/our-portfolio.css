@@ -122,20 +122,20 @@
   .our-portfolio__arrow { flex-basis: 38px; width: 38px; height: 38px; }
 }
 @media (max-width: 620px) {
-  .our-portfolio { padding: 52px 16px 0; }
-  .our-portfolio__heading { align-items: flex-start; flex-direction: column; gap: 18px; margin-bottom: 24px; }
+  .our-portfolio { padding: 40px 16px 16px; }
+  .our-portfolio__heading { align-items: flex-start; flex-direction: column; gap: 18px; margin-bottom: 16px; }
   .our-portfolio__eyebrow { margin-bottom: 13px; }
   .our-portfolio h2 { font-size: clamp(43px, 11vw, 64px); }
   .our-portfolio__heading p { margin-top: 13px; }
   .our-portfolio__view-all { min-height: 43px; margin-top: 0; }
-  .our-portfolio__grid { display: grid; grid-template-columns: 1fr; grid-template-rows: none; width: calc(100% + 32px); margin-left: -16px; margin-right: -16px; }
+  .our-portfolio__grid { display: grid; grid-template-columns: 1fr; grid-template-rows: none; gap: 12px; width: calc(100% + 32px); margin-left: -16px; margin-right: -16px; }
   .our-portfolio__grid { grid-template-areas: none; grid-template-rows: none; }
   .our-portfolio__card--top-video,
   .our-portfolio__card--top-product,
   .our-portfolio__card--top-commerce,
   .our-portfolio__card--bottom-car,
-  .our-portfolio__card--bottom-fashion { grid-area: auto; grid-column: 1; grid-row: auto; min-height: 290px; }
-  .our-portfolio__card--top-video { min-height: 340px; }
+  .our-portfolio__card--bottom-fashion { grid-area: auto; grid-column: 1; grid-row: auto; height: 420px; min-height: 420px; }
+  .our-portfolio__card--top-video { height: 420px; min-height: 420px; }
   .our-portfolio__card h3 { font-size: 25px; }
   .our-portfolio__card li { font-size: 9px; letter-spacing: .14em; }
 }

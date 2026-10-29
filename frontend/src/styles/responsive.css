@@ -122,13 +122,33 @@
   .agency-site .our-portfolio__view-all { margin-top: 0 !important; min-height: 44px !important; }
   .agency-site .our-portfolio__grid {
     grid-template-columns: minmax(0, 1fr) !important;
-    grid-template-areas: "feature" "product" "commerce" "car" "fashion" !important;
-    grid-template-rows: 360px 300px 300px 300px 300px !important;
+    grid-template-areas: "feature" "product" "commerce" !important;
+    grid-template-rows: none !important;
+    grid-auto-rows: 440px !important;
+    gap: 14px !important;
     width: calc(100% + 40px) !important;
     margin-left: -20px !important;
     margin-right: -20px !important;
   }
-  .agency-site .our-portfolio__card h3 { font-size: 23px !important; }
+  .agency-site .our-portfolio__card--top-video,
+  .agency-site .our-portfolio__card--top-product,
+  .agency-site .our-portfolio__card--top-commerce {
+    display: block !important;
+    grid-area: auto !important;
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    height: 440px !important;
+    min-height: 440px !important;
+    box-sizing: border-box !important;
+  }
+  .agency-site .our-portfolio__card-content {
+    left: 16px !important;
+    right: 16px !important;
+    bottom: 22px !important;
+    z-index: 3 !important;
+    align-items: flex-end !important;
+  }
+  .agency-site .our-portfolio__card h3 { font-size: 23px !important; line-height: 1.15 !important; margin-bottom: 10px !important; }
   .agency-site .client-stories__copy { padding: 48px 20px 16px !important; }
   .agency-site .client-stories__copy h2 { font-size: clamp(42px, 11vw, 58px) !important; }
   .agency-site .client-stories__copy > p { font-size: 14px !important; }
