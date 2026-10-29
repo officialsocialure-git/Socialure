@@ -1,17 +1,18 @@
 const prContent = {
   number: "03",
   label: "PUBLIC RELATIONS",
-  title: "Give your brand a story worth sharing.",
-  description: "We help shape the story behind your brand and put it in front of the right people with thoughtful outreach, clear messaging and purposeful campaigns.",
+  title: "Be talked about for the right reasons.",
+  description: "Good coverage builds credibility that ads cannot buy. Our PR packages help your brand tell its story to the right publications, so the story people read matches the brand you have built.",
   cards: [
-    { tag: "Discover", title: "Find the story", text: "Identify what makes your brand relevant and different." },
-    { tag: "Shape", title: "Craft the message", text: "Build a clear narrative for your audience and media." },
-    { tag: "Connect", title: "Reach the right people", text: "Plan relevant media and creator outreach." },
-    { tag: "Review", title: "Learn and refine", text: "Review coverage and improve the next campaign." }
+    { tag: "Story", title: "Shape it", text: "Your brand and founder story, shaped for media." },
+    { tag: "Reach", title: "Pitch it", text: "PR packages with press outreach and coverage support." },
+    { tag: "Credibility", title: "Build it", text: "Founder positioning and brand features." },
+
   ],
-  bring: "Your news, expertise and brand perspective.",
-  offer: "Messaging, campaign planning and outreach direction.",
-  together: "We align on every story and outreach plan before it goes out.",
-  cta: "Plan a PR campaign"
+  bring: "Your story and your availability.",
+  offer: "The angles, the writing and the outreach.",
+  together: "You approve every message that goes out in your name.",
+  note: "We pitch and support coverage. Publications decide what they run.",
+  cta: "Explore PR packages"
 };
 export default prContent;

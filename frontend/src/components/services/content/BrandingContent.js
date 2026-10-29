@@ -1,17 +1,17 @@
 const brandingContent = {
-  number: "02",
-  label: "BRANDING",
-  title: "Build a brand people remember.",
-  description: "We turn your ideas into a clear, consistent identity—from the way your brand looks to the way it speaks—so every touchpoint feels unmistakably yours.",
+  number: "01",
+  label: "BRAND FOUNDATION",
+  title: "Know who you are before you show up.",
+  description: "A brand that feels clear starts with clear thinking. We sit down with you, understand your product, your customer and your vision, and turn it into a brand that looks, sounds and feels like you.",
   cards: [
-    { tag: "Discover", title: "Find your position", text: "Clarify your audience, purpose and place in the market." },
-    { tag: "Define", title: "Shape your voice", text: "Create a tone and message your customers recognise." },
-    { tag: "Design", title: "Create identity", text: "Logo, colour, typography and visual direction." },
-    { tag: "Deliver", title: "Build your brand kit", text: "Keep every future touchpoint consistent and on-brand." }
+    { tag: "Think", title: "Understand", text: "Brand consultation, positioning, audience and competitor understanding." },
+    { tag: "Define", title: "Decide", text: "Brand purpose, voice and messaging." },
+    { tag: "Design", title: "Shape", text: "Logo and identity, colour, typography, packaging direction." },
+    { tag: "Document", title: "Keep", text: "A complete brand kit your team and every future vendor can follow." }
   ],
-  bring: "Your story, ambition and point of view.",
-  offer: "Strategy, creative direction and a clear visual system.",
-  together: "We refine the direction together before the identity is finalised.",
-  cta: "Plan my brand"
+  bring: "Your product, your story, your instincts.",
+  offer: "Structure, strategy and design craft.",
+  together: "Every direction is discussed, and the final call is yours.",
+  cta: "Start with a Brand Foundation Sprint"
 };
 export default brandingContent;

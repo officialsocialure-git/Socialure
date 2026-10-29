@@ -1,17 +1,17 @@
 const aiVideosContent = {
   number: "04",
-  label: "AI VIDEOS",
-  title: "Make your next idea impossible to ignore.",
-  description: "We turn campaign ideas into attention-grabbing video concepts and visual stories designed for your brand, audience and platform.",
+  label: "CAMPAIGNS AND SHOOTS",
+  title: "Big moments, made properly.",
+  description: "Launches, festive drops and new collections deserve more than a quick post. We plan and produce campaigns from the first concept to the final cut, so your brand shows up with one clear look and one clear story.",
   cards: [
-    { tag: "Imagine", title: "Shape the concept", text: "Turn your brief into a strong visual idea." },
-    { tag: "Design", title: "Set the direction", text: "Define the look, mood and story before production." },
-    { tag: "Create", title: "Produce the film", text: "Build AI-powered visuals and engaging video content." },
-    { tag: "Deliver", title: "Prepare for launch", text: "Format final assets for your chosen channels." }
+    { tag: "Concept", title: "Imagine", text: "Campaign idea, script and storyboard." },
+    { tag: "Shoot", title: "Capture", text: "Campaign shoot, product shoot and lifestyle shoot." },
+    { tag: "Film", title: "Produce", text: "Campaign videos and offer videos." },
+    { tag: "Roll out", title: "Multiply", text: "Edits and cut-downs for each platform, so one shoot becomes many pieces." }
   ],
-  bring: "Your goal, product and campaign idea.",
-  offer: "Creative direction, visual development and production.",
-  together: "We review the concept and key frames before final delivery.",
-  cta: "Plan an AI video"
+  bring: "Your goals, your product and your approval on the concept.",
+  offer: "Creative direction, crew, production and edits.",
+  together: "Nothing gets shot until the concept feels right to you.",
+  cta: "Plan a campaign"
 };
 export default aiVideosContent;

@@ -34,6 +34,21 @@ export default function ServiceDetail({ serviceId = "website", onBack }) {
           ))}
         </div>
 
+        {service.process?.length > 0 && (
+          <section className="service-detail-process" aria-labelledby="service-detail-process-title">
+            <h2 id="service-detail-process-title">{service.processTitle || "How it works"}</h2>
+            <div className="service-detail-process-grid">
+              {service.process.map((step) => (
+                <article className="service-detail-process-step" key={step.number}>
+                  <span className="service-detail-process-number">{step.number}</span>
+                  <h3>{step.title}</h3>
+                  <p>{step.text}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
+
         <div className="service-detail-collaboration">
           <article className="service-detail-note">
             <span>You bring</span>
@@ -48,6 +63,8 @@ export default function ServiceDetail({ serviceId = "website", onBack }) {
             <p>{service.together}</p>
           </article>
         </div>
+
+        {service.note && <p className="service-detail-note-caption">{service.note}</p>}
 
         <button type="button" className="service-detail-cta" onClick={startProject}>{service.cta}</button>
       </section>

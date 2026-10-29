@@ -32,7 +32,7 @@ const projects = [
     type: "VIDEO",
     categories: ["CAMPAIGN", "MODEL SHOOT", "POST-PRODUCTION"],
     image: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1400&q=85",
-    video: "/video1.mp4",
+    video: "/fashion_campaign.MP4",
     alt: "Fashion film campaign",
     layout: "top-video",
   },
@@ -42,6 +42,7 @@ const projects = [
     type: "PRODUCT",
     categories: ["PRODUCT", "PHOTOGRAPHY", "AI VISUALS"],
     image: "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=1100&q=85",
+    video: "/Product_visuals.MP4",
     alt: "Premium skincare product visuals",
     layout: "top-product",
   },
@@ -51,6 +52,7 @@ const projects = [
     type: "E-COMMERCE",
     categories: ["E-COMMERCE", "BRANDING", "VISUALS"],
     image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1100&q=85",
+    video: "/website.MP4",
     alt: "Warm modern interior brand photography",
     layout: "top-commerce",
   },
@@ -92,7 +94,7 @@ export default function Portfolio() {
         </div>
 
         <div className="our-portfolio__grid">
-          {projects.map((project) => (
+          {projects.slice(0, 3).map((project) => (
             <a
               className={`our-portfolio__card our-portfolio__card--${project.layout}`}
               href="#contact"

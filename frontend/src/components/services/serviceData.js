@@ -5,7 +5,7 @@ import socialMediaContent from "./content/SocialMediaContent.js";
 
 const websiteContent = {
   number: "02",
-  label: "WEBSITE BUILD",
+  label: "THE WEBSITE",
   title: "A website that sells the way you would.",
   description: "Your website is your brand’s home. We design and build it to look beautiful, load fast and guide visitors from curious to buying, then shoot the photos and videos that fill it so every page feels real, not templated.",
   cards: [
