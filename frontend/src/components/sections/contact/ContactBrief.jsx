@@ -102,18 +102,16 @@ export default function ContactBrief() {
             a product shoot or a brand film — we’d love to hear it.
           </p>
           <a className="contact-brief__detail" href="mailto:hello@aurelia.studio">
-            <Mail aria-hidden="true" /><span>hello@aurelia.studio</span>
+            <Mail aria-hidden="true" /><span>officialsocialure@gmail.com</span>
           </a>
           <a className="contact-brief__detail" href="tel:+918920286941">
             <Phone aria-hidden="true" /><span>+91 89202 86941</span>
           </a>
-          <a className="contact-brief__detail" href="https://www.instagram.com/" target="_blank" rel="noreferrer">
-            <Instagram aria-hidden="true" /><span>Follow us on Instagram</span>
-          </a>
+          
           <div className="contact-brief__socials" aria-label="Social media">
             <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook"><Facebook /></a>
             <a href="https://x.com/" target="_blank" rel="noreferrer" aria-label="X"><span className="contact-brief__x-mark">𝕏</span></a>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin /></a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram/></a>
           </div>
         </div>
       </div>

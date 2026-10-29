@@ -130,11 +130,11 @@ body,.agency-site{background-color:#0F3D3A}
 
 /* Burgundy eyebrow and Runs; keep Project in the original gold. */
 .agency-site .project-process .project-process-eyebrow{
-  color:#6C151E!important;
+  color:#F5DABF!important;
 }
 .agency-site .project-process .project-process-eyebrow span{
-  background:#6C151E!important;
-  background-color:#6C151E!important;
+  background:#F5DABF!important;
+  background-color:#F5DABF!important;
 }
 .agency-site .project-process h2 em{
   color:#D0A45C!important;
@@ -143,7 +143,7 @@ body,.agency-site{background-color:#0F3D3A}
   color:#D0A45C!important;
 }
 .agency-site .project-process h2 em .project-runs-word{
-  color:#6C151E!important;
+  color:#F5DABF!important;
 }
 
 /* Philosophy eyebrow label and its horizontal accent line in burgundy red. */
@@ -173,7 +173,7 @@ body,.agency-site{background-color:#0F3D3A}
 .agency-site[data-theme="dark"] .hero h1 .hero-bordo,
 .agency-site[data-theme="dark"] .hero h1 .bordo,
 .agency-site[data-theme="dark"] .hero h1 .text-bordo{
-  color:#6C151E!important;
+  color:#F5DABF!important;
 }
 .agency-site[data-theme="dark"] .philosophy-section,
 .agency-site[data-theme="dark"] .project-process,
