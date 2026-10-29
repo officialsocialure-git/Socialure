@@ -8,12 +8,13 @@ import "./services-showcase.css";
 import "./services-red-accents.css";
 
 const STORAGE_KEY = "aurelia-our-services-v1";
+const serviceImageOverrides = { website: "/branding_foundationPNG.PNG", branding: "/website.PNG", pr: "/content_engine.PNG", "ai-videos": "/campigain_shoot.PNG", "brand-kit": "/PR.PNG" };
 const defaults = [
-  { id: "website", number: "01", title: "Brand Foundation", description: "Positioning, identity and a brand kit you can build on.", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=85", alt: "Brand foundation and strategy", icon: "monitor" },
-  { id: "branding", number: "02", title: "The Website", description: "Modern, high-performing websites that turn visitors into customers.", image: "https://images.unsplash.com/photo-1634942536790-2534db3a2e7d?auto=format&fit=crop&w=1000&q=85", alt: "Website design and development", icon: "sprout" },
-  { id: "pr", number: "03", title: "The Content Engine", description: "Creative content and social media strategy to keep your brand active and growing.", image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1000&q=85", alt: "Content creation and media", icon: "megaphone" },
-  { id: "ai-videos", number: "04", title: "Campaigns and Shoots", description: "Visual campaigns, product shoots and AI-powered videos that bring your story to life.", image: "https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=1000&q=85", alt: "Campaign and video production", icon: "video" },
-  { id: "brand-kit", number: "05", title: "Press and Presence", description: "Public relations, brand assets and social presence that amplify your credibility.", image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1000&q=85", alt: "Press, brand assets and social presence", icon: "package" },
+  { id: "website", number: "01", title: "Brand Foundation", description: "Positioning, identity and a brand kit you can build on.", image: "/branding_foundationPNG.PNG", alt: "Brand foundation and strategy", icon: "monitor" },
+  { id: "branding", number: "02", title: "The Website", description: "Modern, high-performing websites that turn visitors into customers.", image: "/website.PNG", alt: "Website design and development", icon: "sprout" },
+  { id: "pr", number: "03", title: "The Content Engine", description: "Creative content and social media strategy to keep your brand active and growing.", image: "/content_engine.PNG", alt: "Content creation and media", icon: "megaphone" },
+  { id: "ai-videos", number: "04", title: "Campaigns and Shoots", description: "Visual campaigns, product shoots and AI-powered videos that bring your story to life.", image: "/campigain_shoot.PNG", alt: "Campaign and video production", icon: "video" },
+  { id: "brand-kit", number: "05", title: "Press and Presence", description: "Public relations, brand assets and social presence that amplify your credibility.", image: "/PR.PNG", alt: "Press, brand assets and social presence", icon: "package" },
 ];
 const iconMap = { monitor: Monitor, sprout: Sprout, megaphone: Megaphone, video: Video, package: Package, chart: ChartNoAxesColumnIncreasing };
 const defaultHeading = { eyebrow: "OUR SERVICES", title: "Creative Solutions ", accent: "for Every Stage.", description: "From strategy and design to content and growth, we offer end-to-end creative services to help your brand stand out and scale." };
@@ -63,7 +64,7 @@ export default function Services({ onOpenService }) {
   useEffect(() => {
     try {
       const saved = JSON.parse(window.localStorage.getItem(STORAGE_KEY) || "null");
-      if (saved?.cards?.length === 5) setCards(saved.cards.map((card) => ({ ...card, title: defaults.find((item) => item.id === card.id)?.title || card.title })));
+      if (saved?.cards?.length === 5) setCards(saved.cards.map((card) => ({ ...card, title: defaults.find((item) => item.id === card.id)?.title || card.title, ...(serviceImageOverrides[card.id] ? { image: serviceImageOverrides[card.id] } : {}) })));
       if (saved?.heading) {
         const restoredHeading = {
           ...defaultHeading,
