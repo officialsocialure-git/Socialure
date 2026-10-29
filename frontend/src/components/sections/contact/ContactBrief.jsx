@@ -104,14 +104,13 @@ export default function ContactBrief() {
           <a className="contact-brief__detail" href="mailto:hello@aurelia.studio">
             <Mail aria-hidden="true" /><span>officialsocialure@gmail.com</span>
           </a>
-          <a className="contact-brief__detail" href="tel:+918920286941">
-            <Phone aria-hidden="true" /><span>+91 89202 86941</span>
+          <a className="contact-brief__detail" href="tel:+918176022770">
+            <Phone aria-hidden="true" /><span>+91 81760 22770</span>
           </a>
           
           <div className="contact-brief__socials" aria-label="Social media">
-            <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook"><Facebook /></a>
-            <a href="https://x.com/" target="_blank" rel="noreferrer" aria-label="X"><span className="contact-brief__x-mark">𝕏</span></a>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram/></a>
+            <a href="https://www.facebook.com/share/1KTGnqCesP/?mibextid=wwXIfr" target="_blank" rel="noreferrer" aria-label="Facebook"><Facebook /></a>
+            <a href="https://www.instagram.com/socialure.in?xtok=bWE0eTYyZXhvN2Rr&utm_source=qr" target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram/></a>
           </div>
         </div>
       </div>

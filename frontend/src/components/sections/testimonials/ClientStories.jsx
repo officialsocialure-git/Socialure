@@ -4,7 +4,7 @@ import "./client-stories.css";
 
 const stories = [
   {
-    quote: "Aurelia understood our vision instantly and turned it into a campaign that truly reflects our brand. The team is creative, professional and a pleasure to work with.",
+    quote: "Socialure understood our vision instantly and turned it into a campaign that truly reflects our brand. The team is creative, professional and a pleasure to work with.",
     name: "Ritika Mehra",
     role: "Founder, Maison & Co.",
     initials: "RM",
@@ -15,7 +15,7 @@ const stories = [
     name: "Ananya Sharma",
     role: "Brand Lead, Studio North",
     initials: "AS",
-    rating: 5,
+    rating: 4.5,
   },
   {
     quote: "The team brought fresh perspective to our brief and made every detail feel intentional. The final campaign had exactly the energy we wanted.",
