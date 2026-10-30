@@ -110,7 +110,7 @@ export default function Services({ onOpenService }) {
               aria-label={card.title}
               onMouseEnter={(event) => { if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) event.currentTarget.classList.add("is-open"); }}
               onMouseLeave={(event) => { if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) event.currentTarget.classList.remove("is-open"); }}
-              onClick={(event) => { if (event.target.closest(".sliding-service-explore")) return; if (window.matchMedia("(max-width: 620px)").matches) { event.currentTarget.classList.toggle("is-open"); } else { onOpenService?.(card.id); } }}
+              onClick={(event) => { if (event.target.closest(".sliding-service-explore")) return; onOpenService?.(card.id, event.currentTarget); }}
               onFocus={(event) => event.currentTarget.classList.add("is-open")}
               onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) event.currentTarget.classList.remove("is-open"); }}
               onKeyDown={(event) => { if (event.key === "Escape") event.currentTarget.classList.remove("is-open"); }}
@@ -126,7 +126,7 @@ export default function Services({ onOpenService }) {
                   <span className="sliding-service-rule" />
                   <p>{card.description}</p>
                 </div>
-                <Link href={`/services/${card.id}`} className="sliding-service-explore" onClick={(event) => event.stopPropagation()} aria-label={"Explore " + card.title}>
+                <Link href={`/services/${card.id}`} className="sliding-service-explore" onClick={(event) => { event.preventDefault(); event.stopPropagation(); onOpenService?.(card.id, event.currentTarget.closest(".sliding-service-panel")); }} aria-label={"Explore " + card.title}>
                   <span className="sliding-service-label">EXPLORE</span><span className="sliding-service-arrow" aria-hidden="true">→</span>
                 </Link>
                 <span className="sliding-service-metal" aria-hidden="true" />

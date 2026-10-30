@@ -1,0 +1,128 @@
+/* Keep the original homepage and sliding service showcase mounted behind the detail view. */
+.service-detail-overlay {
+  position: fixed;
+  inset: 84px 0 0;
+  z-index: 80;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 0 0 28px;
+  background: rgba(5, 18, 15, .58);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  animation: serviceOverlayEnter 360ms ease both;
+}
+
+.service-detail-overlay .service-detail-page {
+  min-height: 100%;
+  padding-top: 22px;
+  background: transparent;
+}
+
+.service-detail-overlay .service-detail-panel {
+  box-shadow: 0 24px 80px rgba(0, 0, 0, .24);
+}
+
+@keyframes serviceOverlayEnter {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Softer cinematic entrance with gentle easing and less visual movement. */
+.service-detail-panel {
+  animation: serviceDetailEnter 1150ms cubic-bezier(.22, 1, .36, 1) both;
+  transform-origin: 50% 18%;
+  will-change: opacity, transform;
+}
+
+.service-detail-back,
+.service-detail-eyebrow,
+.service-detail-panel > h1,
+.service-detail-intro,
+.service-detail-grid,
+.service-detail-process,
+.service-detail-collaboration,
+.service-detail-note-caption,
+.service-detail-cta {
+  opacity: 0;
+  animation: serviceDetailContentEnter 980ms cubic-bezier(.22, 1, .36, 1) both;
+  will-change: opacity, transform;
+}
+
+.service-detail-back { animation-delay: 160ms; }
+.service-detail-eyebrow { animation-delay: 230ms; }
+.service-detail-panel > h1 { animation-delay: 300ms; }
+.service-detail-intro { animation-delay: 390ms; }
+.service-detail-grid { animation-delay: 490ms; }
+.service-detail-process { animation-delay: 590ms; }
+.service-detail-collaboration { animation-delay: 670ms; }
+.service-detail-note-caption { animation-delay: 740ms; }
+.service-detail-cta { animation-delay: 790ms; }
+
+.service-detail-card,
+.service-detail-process-step,
+.service-detail-note {
+  opacity: 0;
+  animation: serviceDetailContentEnter 900ms cubic-bezier(.22, 1, .36, 1) both;
+}
+
+.service-detail-card:nth-child(1),
+.service-detail-process-step:nth-child(1) { animation-delay: 530ms; }
+.service-detail-card:nth-child(2),
+.service-detail-process-step:nth-child(2) { animation-delay: 610ms; }
+.service-detail-card:nth-child(3),
+.service-detail-process-step:nth-child(3) { animation-delay: 690ms; }
+.service-detail-card:nth-child(4),
+.service-detail-process-step:nth-child(4) { animation-delay: 770ms; }
+.service-detail-note:nth-child(1) { animation-delay: 700ms; }
+.service-detail-note:nth-child(2) { animation-delay: 780ms; }
+.service-detail-note:nth-child(3) { animation-delay: 860ms; }
+
+@keyframes serviceDetailEnter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0) scale(.99);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes serviceDetailContentEnter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (max-width: 620px) {
+  .service-detail-overlay {
+    inset: 70px 0 0;
+    padding-bottom: 16px;
+  }
+  .service-detail-overlay .service-detail-page {
+    padding-top: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-detail-overlay,
+  .service-detail-panel,
+  .service-detail-back,
+  .service-detail-eyebrow,
+  .service-detail-panel > h1,
+  .service-detail-intro,
+  .service-detail-grid,
+  .service-detail-process,
+  .service-detail-collaboration,
+  .service-detail-note-caption,
+  .service-detail-cta {
+    animation: none !important;
+    transition: none !important;
+    filter: none !important;
+  }
+}

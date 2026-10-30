@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { ArrowRight, Facebook, Linkedin, Mail, ChevronDown, Phone, Instagram, CheckCircle2, AlertCircle, LoaderCircle } from "lucide-react";
 import "./contact-brief.css";
+import "./contact-brief-theme.css";
 
 const EMAILJS_ENDPOINT = "https://api.emailjs.com/api/v1.0/email/send";
 const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID?.trim();

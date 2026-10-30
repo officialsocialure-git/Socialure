@@ -1,0 +1,112 @@
+/* Contact section — warm ivory theme */
+.contact-brief {
+  background: #FBECD2;
+  color: #0F3D3A;
+}
+
+.contact-brief__story {
+  background-color: #FBECD2;
+  background-image:
+    linear-gradient(90deg, rgba(251,236,210,.78), rgba(251,236,210,.86) 58%, rgba(251,236,210,.80)),
+    url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1600&q=85');
+  background-size: cover;
+  background-position: center;
+}
+
+.contact-brief__story::after {
+  background: linear-gradient(90deg, rgba(251,236,210,.16), rgba(251,236,210,.08) 58%, rgba(251,236,210,.22));
+}
+
+.contact-brief__eyebrow,
+.contact-brief__story h2,
+.contact-brief__intro,
+.contact-brief__detail {
+  color: #0F3D3A;
+}
+
+.contact-brief__eyebrow span {
+  background: #6C151E;
+}
+
+.contact-brief__headline-accent,
+.contact-brief__form-heading-accent {
+  color: #6C151E;
+}
+
+.contact-brief__detail {
+  border-bottom-color: rgba(15,61,58,.22);
+}
+
+.contact-brief__detail:hover {
+  color: #6C151E;
+}
+
+.contact-brief__socials a {
+  border-color: rgba(15,61,58,.65);
+  color: #0F3D3A;
+}
+
+.contact-brief__socials a:hover {
+  background: #0F3D3A;
+  color: #FBECD2;
+}
+
+.contact-brief__form-panel {
+  background: #FBECD2;
+}
+
+.contact-brief__form-wrap h3,
+.contact-brief form label {
+  color: #0F3D3A;
+}
+
+.contact-brief__subtext {
+  color: #52645D;
+}
+
+.contact-brief form input,
+.contact-brief form select,
+.contact-brief form textarea {
+  border-color: rgba(15,61,58,.28);
+  background: rgba(255,255,255,.48);
+  color: #0F3D3A;
+}
+
+.contact-brief form input::placeholder,
+.contact-brief form textarea::placeholder {
+  color: #71847D;
+}
+
+.contact-brief form select option {
+  background: #FBECD2;
+  color: #0F3D3A;
+}
+
+.contact-brief__select-wrap > svg {
+  color: #C6A66B;
+}
+
+.contact-brief form input:focus,
+.contact-brief form select:focus,
+.contact-brief form textarea:focus {
+  border-color: #0F3D3A;
+  box-shadow: 0 0 0 3px rgba(15,61,58,.10);
+}
+
+.contact-brief__submit {
+  background: #6C151E;
+  color: #fffefa;
+}
+
+.contact-brief__submit:hover {
+  background: #841D28;
+  color: #fffefa;
+}
+
+@media (max-width: 640px) {
+  .contact-brief__story {
+    background-image:
+      linear-gradient(90deg, rgba(251,236,210,.78), rgba(251,236,210,.86)),
+      url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=85');
+  }
+}

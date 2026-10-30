@@ -12,6 +12,7 @@ import Portfolio from "../sections/portfolio/Portfolio.jsx";
 import ClientStories from "../sections/testimonials/ClientStories.jsx";
 import ContactBrief from "../sections/contact/ContactBrief.jsx";
 import ServiceDetail from "../services/ServiceDetail.jsx";
+import "../services/service-transition.css";
 
 export default function App({ serviceId = null }) {
   const router = useRouter();
@@ -41,7 +42,11 @@ export default function App({ serviceId = null }) {
     return () => mobileTheme.removeEventListener?.("change", keepMobileDark);
   }, []);
 
+  // Open service details as an overlay so the original showcase stays mounted behind it.
   const openService = (serviceId) => {
+    try {
+      window.sessionStorage.setItem("offmint-services-scroll", String(window.scrollY));
+    } catch {}
     router.push(`/services/${serviceId}`);
   };
 
@@ -51,26 +56,45 @@ export default function App({ serviceId = null }) {
     router.push("/#services");
   };
 
-  if (serviceId) {
-    return (
-      <div className="agency-site" data-theme={theme}>
-        <Navbar theme={theme} onToggleTheme={toggleTheme} />
-        <ServiceDetail serviceId={serviceId} onBack={backToServices} />
-      </div>
-    );
-  }
+  useEffect(() => {
+    if (!serviceId) {
+      try {
+        const savedScroll = window.sessionStorage.getItem("offmint-services-scroll");
+        if (savedScroll !== null) {
+          window.requestAnimationFrame(() => window.scrollTo(0, Number(savedScroll) || 0));
+          window.sessionStorage.removeItem("offmint-services-scroll");
+        }
+      } catch {}
+    }
+  }, [serviceId]);
+
+  useEffect(() => {
+    if (!serviceId) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [serviceId]);
 
   return (
     <main className="agency-site" data-theme={theme}>
       <Navbar theme={theme} onToggleTheme={toggleTheme} />
-      <IntroVideo />
-      <OurPhilosophyEditorial />
-      <Services onOpenService={openService} />
-      <ProjectProcess />
-      <Portfolio />
-      <ClientStories />
-      <ContactBrief />
-      <Footer />
+      <div className={serviceId ? "agency-home-content agency-home-content--behind" : "agency-home-content"}>
+        <IntroVideo />
+        <OurPhilosophyEditorial />
+        <Services onOpenService={openService} />
+        <ProjectProcess />
+        <Portfolio />
+        <ClientStories />
+        <ContactBrief />
+        <Footer />
+      </div>
+      {serviceId && (
+        <div className="service-detail-overlay">
+          <ServiceDetail serviceId={serviceId} onBack={backToServices} />
+        </div>
+      )}
     </main>
   );
 }
