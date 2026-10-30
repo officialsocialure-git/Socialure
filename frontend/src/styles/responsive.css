@@ -114,7 +114,7 @@
   .agency-site .services-showcase-heading > p { font-size: 14px !important; }
   .agency-site .project-process { padding: 52px 20px 44px !important; }
   .agency-site .project-process h2 { font-size: clamp(32px, 8.5vw, 44px) !important; }
-  .agency-site .project-process-timeline { grid-template-columns: 1fr !important; gap: 0 !important; margin-top: 42px !important; }
+  .agency-site .project-process-timeline { grid-template-columns: 1fr !important; margin-top: 42px !important; }
   .agency-site .our-portfolio { padding: 50px 20px 0 !important; }
   .agency-site .our-portfolio__heading { display: flex !important; flex-direction: column !important; align-items: flex-start !important; gap: 16px !important; margin-bottom: 24px !important; }
   .agency-site .our-portfolio h2 { font-size: clamp(34px, 9vw, 46px) !important; letter-spacing: -.04em !important; }

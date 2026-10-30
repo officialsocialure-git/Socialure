@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef, useCallback } from "react";
 import { Search, Target, Settings, TrendingUp } from "lucide-react";
 import "./project-process.css";
 
@@ -13,6 +13,58 @@ const stages = [
 
 export default function ProjectProcess() {
   const [activeStep, setActiveStep] = useState(0);
+  const timelineRef = useRef(null);
+  const dotRefs = useRef([]);
+  const [trackerStyle, setTrackerStyle] = useState({});
+
+  const updatePositions = useCallback(() => {
+    const timeline = timelineRef.current;
+    const activeDot = dotRefs.current[activeStep];
+    const firstDot = dotRefs.current[0];
+    const lastDot = dotRefs.current[stages.length - 1];
+
+    if (!timeline || !activeDot) return;
+
+    const timelineRect = timeline.getBoundingClientRect();
+    const activeDotRect = activeDot.getBoundingClientRect();
+
+    // Exact center coordinates of the active dot relative to timeline container
+    const top = activeDotRect.top - timelineRect.top + activeDotRect.height / 2;
+    const left = activeDotRect.left - timelineRect.left + activeDotRect.width / 2;
+
+    let progressHeight = 0;
+    let firstDotTop = 24;
+    let baseLineHeight = "calc(100% - 48px)";
+
+    if (firstDot) {
+      const firstRect = firstDot.getBoundingClientRect();
+      firstDotTop = firstRect.top - timelineRect.top + firstRect.height / 2;
+      progressHeight = Math.max(0, top - firstDotTop);
+    }
+
+    if (firstDot && lastDot) {
+      const firstRect = firstDot.getBoundingClientRect();
+      const lastRect = lastDot.getBoundingClientRect();
+      const lastDotTop = lastRect.top - timelineRect.top + lastRect.height / 2;
+      baseLineHeight = `${lastDotTop - firstDotTop}px`;
+    }
+
+    setTrackerStyle({
+      "--tracker-top": `${top}px`,
+      "--tracker-left": `${left}px`,
+      "--progress-height": `${progressHeight}px`,
+      "--base-line-top": `${firstDotTop}px`,
+      "--base-line-height": baseLineHeight,
+    });
+  }, [activeStep]);
+
+  useEffect(() => {
+    updatePositions();
+    const handleResize = () => updatePositions();
+    window.addEventListener("resize", handleResize);
+    document.fonts?.ready?.then(updatePositions);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [updatePositions]);
 
   useEffect(() => {
     const timer = window.setInterval(() => {
@@ -30,7 +82,15 @@ export default function ProjectProcess() {
           From understanding to growth, we follow a clear and result-driven process.
         </p>
 
-        <div className="project-process-timeline" style={{ "--active-step": activeStep }}>
+        <div
+          ref={timelineRef}
+          className="project-process-timeline"
+          style={{
+            "--active-step": activeStep,
+            "--active-position": `${12.5 + activeStep * 25}%`,
+            ...trackerStyle,
+          }}
+        >
           <div className="project-process-base-line" aria-hidden="true" />
           <div className="project-process-progress-line" aria-hidden="true" />
           <div className="project-process-tracker" aria-hidden="true">
@@ -47,7 +107,11 @@ export default function ProjectProcess() {
               aria-pressed={index === activeStep}
               aria-label={`Show step ${stage.number}: ${stage.title}`}
             >
-              <span className="project-process-dot" aria-hidden="true" />
+              <span
+                ref={(el) => (dotRefs.current[index] = el)}
+                className="project-process-dot"
+                aria-hidden="true"
+              />
               <span className="project-process-number">{stage.number}</span>
               <span className="project-process-stage-title">{stage.title}</span>
               <span className="project-process-stage-description">{stage.description}</span>

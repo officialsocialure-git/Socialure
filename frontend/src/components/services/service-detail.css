@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
 
 .service-detail-page {
-  --detail-sage: #f5dabf;
+  --detail-sage: #FBECD2;
   --detail-ink: #082b25;
   --detail-burgundy: #6c151e;
   --detail-white: #fffefa;
   width: 100%;
   min-height: calc(100vh - 84px);
   padding: 0 clamp(12px, 3.2vw, 48px) clamp(24px, 4vw, 48px);
-  background: #f5dabf;
+  background: #FBECD2;
   color: var(--detail-ink);
   font-family: 'DM Sans', 'General Sans', sans-serif;
   display: block;
@@ -245,12 +245,12 @@
   .service-detail-page {
     padding: 0 12px 20px;
     min-height: calc(100vh - 70px);
-    background: #f5dabf;
+    background: #FBECD2;
   }
   .service-detail-panel {
     padding: 22px 18px;
     border-radius: 10px;
-    background: #f5dabf;
+    background: #FBECD2;
   }
   .service-detail-back { margin-bottom: 20px; font-size: 14px; gap: 8px; }
   .service-detail-eyebrow { font-size: 10px; margin-bottom: 14px; }

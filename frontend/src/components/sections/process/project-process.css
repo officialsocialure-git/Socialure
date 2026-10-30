@@ -69,7 +69,8 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(18px, 3vw, 48px);
+  column-gap: 0;
+  row-gap: 0;
   margin-top: clamp(58px, 5vw, 82px);
   isolation: isolate;
 }
@@ -97,7 +98,7 @@
   position: absolute;
   z-index: 4;
   top: 0;
-  left: calc(12.5% + var(--active-step) * 25%);
+  left: var(--active-position);
   transform: translate(-50%, -50%);
   pointer-events: none;
   transition: left 1.35s cubic-bezier(.22, 1, .36, 1);
@@ -219,26 +220,28 @@
   }
 
   .project-process-base-line {
-    top: 17px;
-    bottom: calc(var(--mobile-step-height) + var(--mobile-step-gap) + 17px);
-    left: 8px;
+    top: var(--base-line-top, 24px);
+    height: var(--base-line-height, calc(100% - 48px));
+    bottom: auto;
+    left: var(--tracker-left, 7px);
+    transform: translateX(-50%);
     right: auto;
     width: 2px;
-    height: auto;
   }
 
   .project-process-progress-line {
-    top: 17px;
+    top: var(--base-line-top, 24px);
     bottom: auto;
-    left: 8px;
+    left: var(--tracker-left, 7px);
+    transform: translateX(-50%);
     width: 2px;
-    height: calc(var(--active-step) * (var(--mobile-step-height) + var(--mobile-step-gap)));
+    height: var(--progress-height, 0px);
     transition: height 1.35s cubic-bezier(.22, 1, .36, 1);
   }
 
   .project-process-tracker {
-    top: calc(17px + var(--active-step) * (var(--mobile-step-height) + var(--mobile-step-gap)));
-    left: 9px;
+    top: var(--tracker-top, 24px);
+    left: var(--tracker-left, 7px);
     transform: translate(-50%, -50%);
     transition: top 1.35s cubic-bezier(.22, 1, .36, 1);
   }
